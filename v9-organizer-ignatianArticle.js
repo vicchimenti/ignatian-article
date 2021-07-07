@@ -56,7 +56,7 @@
     var closeImageWrapper = '</div>';
     var imageString = '<img class="hidden visually-hidden" />';
     var summaryString = '<p class="card-text articleSummary">' + articleSummary + '</p>';
-    var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong class="dateLabel">Year:</strong> ' + publishDate + '</p>';
+    var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong class="articleLabel">Year:</strong> ' + publishDate + '</p>';
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
     var listItems = '<li class="tag hidden visually-hidden"></li>';
@@ -110,7 +110,7 @@
      * 
      * */
     if (topicSetting != "") {
-        topicSettingString = '<p class="card-text setting">' + topicSetting + '</p>';
+        topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
     }
 
 
