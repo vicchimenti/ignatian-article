@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.2
+   *     @version 5.3
    */
 
 
@@ -123,6 +123,7 @@
       document.write(externalLinkString);
       document.write(summaryString);
       document.write(dateString);
+      document.write(listOfTags);
       document.write(readMoreString);
       document.write(closeSummaryWrapper);
       document.write(closeBodyWrapper);
