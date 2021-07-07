@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.8
+   *     @version 5.9
    */
 
 
@@ -106,6 +106,15 @@
 
 
     /***
+     *  Parse for author
+     * 
+     * */
+    if (topicSetting != "") {
+        topicSettingString = '<p class="card-text setting">' + topicSetting + '</p>';
+    }
+
+
+    /***
      *  parse the list of tags, add <li> tags
      * 
      * */
@@ -139,6 +148,7 @@
     document.write(byLine);
     document.write(summaryString);
     document.write(dateString);
+    document.write(topicSettingString);
     document.write(listOfTags);
     document.write(readMoreString);
     document.write(closeSummaryWrapper);
