@@ -1,8 +1,8 @@
-strong.dateLabel {
+strong.articleLabel {
     font-weight: 500;
 }
 
-p.articleSummary {
+.newsItem .articleSummary p.summaryText {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
