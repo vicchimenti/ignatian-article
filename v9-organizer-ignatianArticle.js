@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.5
+   *     @version 5.6
    */
 
 
@@ -53,7 +53,7 @@
       var closeImageWrapper = '</div>';
       var imageString = '<img class="hidden visually-hidden" />';
       var summaryString = '<p class="card-text">' + articleSummary + '</p>';
-      var dateString = '<p class="card-text publishDate">Year: ' + publishDate + '</p>';
+      var dateString = '<p class="card-text fw-bold publishDate">Year: ' + publishDate + '</p>';
       var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
       var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
       var listItems = '<li class="tag hidden visually-hidden"></li>';
@@ -77,7 +77,7 @@
        * 
        * */
       if (externalLink != "" && journal != "") {
-          externalLinkString = '<span class="externalLink"><em>Journal: </em><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
+          externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
       }
 
 
