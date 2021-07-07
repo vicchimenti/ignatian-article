@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.3
+   *     @version 5.4
    */
 
 
@@ -55,7 +55,8 @@
       var summaryString = '<p class="card-text">' + articleSummary + '</p>';
       var dateString = '<p class="card-text"><em class="publishDate text-muted">' + publishDate + '</em></p>';
       var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-      var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"></div>';
+      var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
+      var listItems = '<li class="tag hidden visually-hidden"></li>';
       var readMoreString = '<p class="readmore hidden visually-hidden">No Article Body Entered</p>';
 
 
