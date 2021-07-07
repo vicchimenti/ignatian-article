@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.91
+   *     @version 5.93
    */
 
 
@@ -43,7 +43,7 @@
      *  default initializations
      * 
      * */
-    var beginningHTML = '<div class="newsItemWrapper card" id="id' + contentID + '" aria-label="' + articleTitle + '"><div class="newsItem standardContent">';
+    var beginningHTML = '<div class="newsItemWrapper ignatianArticle card" id="id' + contentID + '" aria-label="' + articleTitle + '"><div class="newsItem standardContent">';
     var endingHTML = '</div></div>';
     var openRow = '<div class="row no-gutters">';
     var closeRow = '</div>';
@@ -59,7 +59,7 @@
     var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong class="articleLabel">Year:</strong> ' + publishDate + '</p>';
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
-    var listItems = '<li class="tag hidden visually-hidden"></li>';
+    var listItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var readMoreString = '<p class="readmore hidden visually-hidden">No Article Body Entered</p>';
@@ -126,7 +126,7 @@
         }
 
         // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text articleLabel">Ignatian Pedagogy Element:</strong><ul class="categories">' + listItems + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
     }
 
 

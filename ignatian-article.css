@@ -12,3 +12,7 @@ div.newsroomArticle.tags strong {
     font-size: 1.6rem;
     line-height: 2;
 }
+
+.ignatianArticle div.newsroomArticle.tags {
+    display: inline-flex;
+}
