@@ -1,1 +1,3 @@
-# ignatian-article
+# Ignatian Article
+
+A bibliography application
