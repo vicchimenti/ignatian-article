@@ -17,6 +17,10 @@ div.newsroomArticle.tags strong {
     display: inline-flex;
 }
 
+.ignatianArticle .standardContent ul {
+    margin-bottom: 0;
+}
+
 .ignatianArticle .standardContent ul li {
     background: none;
     border: none;
@@ -30,17 +34,3 @@ div.newsroomArticle.tags strong {
 .ignatianArticle .standardContent ul li:before {
     content: unset;
 }
-
-/* .ignatianArticle .standardContent ul li:before {
-
-    font-family: unset;
-    font-size: unset;
-    content: 'b';
-    color: #aa0000;
-    padding-right: 5px;
-    display: table-cell;
-    position: relative;
-    top: 2px;
-
-} */
-
