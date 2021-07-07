@@ -1,7 +1,7 @@
   /***
    *     @author Victor Chimenti, MSCS-SE '20
-   *     @file v9-organizer-blogwithimage.js
-   *     v9/organizer/blogwithimage
+   *     @file v9-organizer-ignatianArticle.js
+   *     v9/organizer/ignatianArticle
    *
    *     This content type will work in conjunction with the Organizer and each item
    *     will contain one article.
