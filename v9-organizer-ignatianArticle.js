@@ -53,7 +53,7 @@
       var closeImageWrapper = '</div>';
       var imageString = '<img class="hidden visually-hidden" />';
       var summaryString = '<p class="card-text">' + articleSummary + '</p>';
-      var dateString = '<p class="card-text fw-bold publishDate">Year: ' + publishDate + '</p>';
+      var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong>Year:</strong> ' + publishDate + '</p>';
       var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
       var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
       var listItems = '<li class="tag hidden visually-hidden"></li>';
