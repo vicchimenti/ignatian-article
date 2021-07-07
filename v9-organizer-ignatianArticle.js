@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.6
+   *     @version 5.7
    */
 
 
@@ -30,10 +30,10 @@
       var externalLinkText = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link Text' output='normal' modifiers='striptags,htmlentities' />");
       var journal = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Journal' output='normal' modifiers='striptags,htmlentities' />");
       var topics = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Topic' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
+      var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' modifiers='striptags,htmlentities' />");
       var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
       var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />");
       var contentID = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='content_id' />");
-
 
 
       /***
@@ -57,6 +57,7 @@
       var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
       var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
       var listItems = '<li class="tag hidden visually-hidden"></li>';
+      var byLine = '<p class="card-text text-muted author hidden visually-hidden">No Author Provided</p>';';
       var readMoreString = '<p class="readmore hidden visually-hidden">No Article Body Entered</p>';
 
 
@@ -91,6 +92,15 @@
       }
 
 
+        /***
+         *  Parse for author
+         * 
+         * */
+        if (author != "") {
+            byLine = '<p class="card-text text-muted author">By ' + author + '</p>';
+        }
+
+
     /***
      *  parse the list of tags, add <li> tags
      * 
@@ -122,6 +132,7 @@
       document.write(openBodyWrapper);
       document.write(openSummaryWrapper);
       document.write(externalLinkString);
+      document.write(byLine);
       document.write(summaryString);
       document.write(dateString);
       document.write(listOfTags);
