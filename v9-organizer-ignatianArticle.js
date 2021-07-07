@@ -57,7 +57,7 @@
       var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
       var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
       var listItems = '<li class="tag hidden visually-hidden"></li>';
-      var byLine = '<p class="card-text text-muted author hidden visually-hidden">No Author Provided</p>';';
+      var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
       var readMoreString = '<p class="readmore hidden visually-hidden">No Article Body Entered</p>';
 
 
@@ -97,7 +97,7 @@
          * 
          * */
         if (author != "") {
-            byLine = '<p class="card-text text-muted author">By ' + author + '</p>';
+            byLine = '<p class="card-text text-muted font-weight-light author"><small>By ' + author + '</small></p>';
         }
 
 
