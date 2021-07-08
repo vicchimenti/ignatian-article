@@ -113,6 +113,35 @@
 
 
 
+    /***
+     *  Parse for Setting
+     * 
+     * */
+    if (topicSetting != "") {
+        topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
+    }
+
+
+
+
+    /***
+     *  parse the list of tags, add <li> tags
+     * 
+     * */
+    if (topics != "") {
+        var arrayOfTags = topics.split(',');
+        for (let i = 0; i < arrayOfTags.length; i++) {
+            let currentItem = arrayOfTags[i].trim();
+            listItems += '<li class="tag">' + currentItem + '</li>';
+        }
+
+        // Print any tags that were selected
+        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
+    }
+
+
+
+
       /***
        *  write document once
        * 
