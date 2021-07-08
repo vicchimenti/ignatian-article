@@ -2,3 +2,40 @@
     text-align: left;
     display: block;
 }
+
+strong.articleLabel {
+    font-weight: 500;
+}
+
+.newsItem .articleSummary p.summaryText {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+div.newsroomArticle.tags strong {
+    color: #333333;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.ignatianArticle div.newsroomArticle.tags {
+    display: inline-flex;
+}
+
+.ignatianArticle .standardContent ul {
+    margin-bottom: 0;
+}
+
+.ignatianArticle .standardContent ul li {
+    background: none;
+    border: none;
+    color: #aa0000;
+    display: inline-block !important;
+    font-size: 1.6rem;
+    margin-right: 5px;
+    padding: 1px 10px;
+}
+
+.ignatianArticle .standardContent ul li:before {
+    content: unset;
+}
