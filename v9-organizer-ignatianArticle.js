@@ -47,11 +47,11 @@
     var openRow = '<div class="row no-gutters">';
     var closeRow = '</div>';
     var titleLink = '<h3 class="card-title">' + articleTitle + '</h3>';
-    var openBodyWrapper = '<div class="col-md-8">';
+    var openBodyWrapper = '<div class="col-md-7">';
     var closeBodyWrapper = '</div>';
     var openSummaryWrapper = '<div class="articleSummary card-body">';
     var closeSummaryWrapper = '</div>';
-    var openImageWrapper = '<div class="newsImage col-md-4 hidden visually-hidden">';
+    var openImageWrapper = '<div class="newsImage col-md-5 hidden visually-hidden">';
     var closeImageWrapper = '</div>';
     var imageString = '<img class="hidden visually-hidden" />';
     var summaryString = '<p class="card-text summaryText">' + articleSummary + '</p>';
@@ -90,7 +90,7 @@
      * 
      * */
     if (articleImage != "") {
-        openImageWrapper = '<div class="col-md-4">';
+        openImageWrapper = '<div class="col-md-5">';
         imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
     }
 
