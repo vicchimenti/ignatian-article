@@ -103,7 +103,7 @@
 
 
     /***
-     *  Parse for author
+     *  Parse for Setting
      * 
      * */
     if (topicSetting != "") {
