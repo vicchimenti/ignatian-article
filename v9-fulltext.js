@@ -162,6 +162,8 @@
       document.write(openPublishWrapper);
       document.write(externalLinkString);
       document.write(dateString);
+      document.write(topicSettingString);
+      document.write(listOfTags);  
       document.write(closePublishWrapper);
       document.write(articleFullBody);
       document.write(closeBodyWrapper);
