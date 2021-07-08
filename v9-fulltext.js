@@ -55,6 +55,9 @@
       var imageString = '<img class="hidden visually-hidden" />';
       var dateString = '<p class="publishDate card-text"><small>' + publishDate + '</small></p>';
       var externalLinkString = '<p class="externalLink hidden">No Proper Link Provided</p>';
+      var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
+      var listItems = '';
+      var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
 
 
 
