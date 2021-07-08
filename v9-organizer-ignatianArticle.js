@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 5.94
+   *     @version 5.95
    */
 
 
@@ -61,7 +61,6 @@
     var listItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
-    // var readMoreString = '<p class="readmore hidden visually-hidden">No Article Body Entered</p>';
 
 
 
@@ -72,7 +71,6 @@
      * */
     if (articleFullBody != "") {
         titleLink = '<h3><a href="' + fullTextLink + '" title="Read the full post ' + articleTitle + '">' + articleTitle + '</a></h3>';
-        // readMoreString = '<p class="readmore"><a href="' + fullTextLink + '" title="Read the full post ' + articleTitle + '">Read More <span class="sr-only sr-only-focusable">about ' + articleTitle + '</span></a></p>';
     }
 
 
@@ -149,7 +147,6 @@
     document.write(dateString);
     document.write(topicSettingString);
     document.write(listOfTags);
-    // document.write(readMoreString);
     document.write(closeSummaryWrapper);
     document.write(closeBodyWrapper);
     document.write(closeRow);
