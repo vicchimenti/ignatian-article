@@ -5,5 +5,6 @@ A bibliography application
 ## TODO
 
 - [x] render tags
-- [] build fulltext
-- [] test with images
+- [x] build fulltext
+- [x] test with images
+- [] build filter engine
