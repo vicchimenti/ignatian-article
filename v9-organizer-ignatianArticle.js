@@ -67,6 +67,8 @@
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var levelString = '<p class="card-text setting level hidden visually-hidden">No Level Provided</p>';
+    var resourceString = '<p class="card-text setting resource hidden visually-hidden">No Resource Provided</p>';
+
 
 
 
@@ -204,6 +206,7 @@
     document.write(dateString);
     document.write(topicSettingString);
     document.write(levelString);
+    document.write(resourceString);
     document.write(listOfCourses);
     document.write(listOfTags);
     document.write(closeSummaryWrapper);
