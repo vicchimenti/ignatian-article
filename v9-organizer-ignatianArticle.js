@@ -62,6 +62,8 @@
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
     var listItems = '';
+    var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul></ul></div>';
+    var courseItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
 
@@ -149,6 +151,7 @@
     document.write(summaryString);
     document.write(dateString);
     document.write(topicSettingString);
+    document.write(courseItems);
     document.write(listOfTags);
     document.write(closeSummaryWrapper);
     document.write(closeBodyWrapper);
