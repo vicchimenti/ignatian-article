@@ -81,6 +81,8 @@
     }
 
 
+
+    
     /***
      *  Parse for external link
      * 
@@ -88,6 +90,8 @@
     if (externalLink != "" && journal != "") {
         externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
     }
+
+
 
 
     /***
@@ -100,6 +104,8 @@
     }
 
 
+
+
     /***
      *  Parse for author
      * 
@@ -107,6 +113,8 @@
     if (author != "") {
         byLine = '<p class="card-text text-muted font-weight-light author"><small>By ' + author + '</small></p>';
     }
+
+
 
 
     /***
@@ -125,8 +133,10 @@
      * 
      * */
     if (level != "") {
-        levelString = '<p class="card-text setting level"><strong class="articleLabel">Setting:</strong> ' + level + '</p>';
+        levelString = '<p class="card-text setting level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
     }
+
+
 
 
     /***
