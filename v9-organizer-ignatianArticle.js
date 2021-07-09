@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.1
+   *     @version 6.2
    */
 
 
@@ -66,6 +66,8 @@
     var courseItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
+    var levelString = '<p class="card-text setting level hidden visually-hidden">No Level Provided</p>';
+
 
 
 
@@ -113,6 +115,17 @@
      * */
     if (topicSetting != "") {
         topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
+    }
+
+
+
+
+    /***
+     *  Parse for Level
+     * 
+     * */
+    if (level != "") {
+        levelString = '<p class="card-text setting level"><strong class="articleLabel">Setting:</strong> ' + level + '</p>';
     }
 
 
@@ -169,6 +182,7 @@
     document.write(summaryString);
     document.write(dateString);
     document.write(topicSettingString);
+    document.write(levelString);
     document.write(listOfCourses);
     document.write(listOfTags);
     document.write(closeSummaryWrapper);
