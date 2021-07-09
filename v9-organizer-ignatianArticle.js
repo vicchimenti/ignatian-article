@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.0
+   *     @version 6.1
    */
 
 
@@ -146,7 +146,7 @@
         }
 
         // Print any tags that were selected
-        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div>';
+        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
     }
 
 
@@ -169,7 +169,7 @@
     document.write(summaryString);
     document.write(dateString);
     document.write(topicSettingString);
-    document.write(courseItems);
+    document.write(listOfCourses);
     document.write(listOfTags);
     document.write(closeSummaryWrapper);
     document.write(closeBodyWrapper);
