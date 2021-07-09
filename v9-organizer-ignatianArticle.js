@@ -82,7 +82,7 @@
 
 
 
-    
+
     /***
      *  Parse for external link
      * 
@@ -134,6 +134,17 @@
      * */
     if (level != "") {
         levelString = '<p class="card-text setting level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
+    }
+
+
+
+
+    /***
+     *  Parse for Resource
+     * 
+     * */
+    if (resource != "") {
+        levelString = '<p class="card-text setting resource"><strong class="articleLabel">Resource:</strong> ' + resource + '</p>';
     }
 
 
