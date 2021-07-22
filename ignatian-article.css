@@ -1,5 +1,6 @@
 strong.articleLabel {
     font-weight: 500;
+    padding-right: 2rem;
 }
 
 .newsItem .articleSummary p.summaryText {
