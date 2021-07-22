@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.5
+   *     @version 6.6
    */
 
 
@@ -50,7 +50,7 @@
     var openRow = '<div class="row no-gutters">';
     var closeRow = '</div>';
     var titleLink = '<h3 class="card-title">' + articleTitle + '</h3>';
-    var openBodyWrapper = '<div class="col-md-7">';
+    var openBodyWrapper = '<div class="col-md-9">';
     var closeBodyWrapper = '</div>';
     var openSummaryWrapper = '<div class="articleSummary card-body">';
     var closeSummaryWrapper = '</div>';
@@ -66,8 +66,8 @@
     var courseItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
-    var levelString = '<p class="card-text setting level hidden visually-hidden">No Level Provided</p>';
-    var resourceString = '<p class="card-text setting resource hidden visually-hidden">No Resource Provided</p>';
+    var levelString = '<p class="card-text level hidden visually-hidden">No Level Provided</p>';
+    var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
 
 
 
@@ -135,7 +135,7 @@
      * 
      * */
     if (level != "") {
-        levelString = '<p class="card-text setting level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
+        levelString = '<p class="card-text level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
     }
 
 
@@ -146,7 +146,7 @@
      * 
      * */
     if (resource != "") {
-        resourceString = '<p class="card-text setting resource"><strong class="articleLabel">Resource:</strong> ' + resource + '</p>';
+        resourceString = '<p class="card-text resource"><strong class="articleLabel">Resource:</strong> ' + resource + '</p>';
     }
 
 
