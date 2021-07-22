@@ -60,7 +60,7 @@
     var summaryString = '<p class="card-text summaryText">' + articleSummary + '</p>';
     var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong class="articleLabel">Year:</strong> ' + publishDate + '</p>';
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-    var listOfTags = '<div class="newsroomArticle tags hidden visually-hidden"><ul></ul></div>';
+    var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul></ul></div>';
     var listItems = '';
     var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul></ul></div>';
     var courseItems = '';
@@ -146,7 +146,7 @@
      * 
      * */
     if (resource != "") {
-        levelString = '<p class="card-text setting resource"><strong class="articleLabel">Resource:</strong> ' + resource + '</p>';
+        resourceString = '<p class="card-text setting resource"><strong class="articleLabel">Resource:</strong> ' + resource + '</p>';
     }
 
 
@@ -164,7 +164,7 @@
         }
 
         // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text pedagogy articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
     }
 
 
