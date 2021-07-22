@@ -15,6 +15,7 @@ div.newsroomArticle.tags strong {
 
 .ignatianArticle div.newsroomArticle.tags {
     display: inline-flex;
+    width: max-content;
 }
 
 .ignatianArticle .standardContent ul {
@@ -27,7 +28,6 @@ div.newsroomArticle.tags strong {
     color: #aa0000;
     display: inline-block !important;
     font-size: 1.6rem;
-    margin-right: 5px;
     padding: 1px 10px;
 }
 
