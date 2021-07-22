@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.6
+   *     @version 6.7
    */
 
 
@@ -113,7 +113,7 @@
      * 
      * */
     if (author != "") {
-        byLine = '<p class="card-text text-muted font-weight-light author"><small>By ' + author + '</small></p>';
+        byLine = '<p class="card-text author"><strong>By ' + author + '</strong></p>';
     }
 
 
