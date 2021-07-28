@@ -4,10 +4,10 @@
 *   @file filter.js
 *
 *   jQuery
-*   This script searches the Alumni SU Voice blog application content items for matches to the
-*   user selected search parameters in the filter field dropdown menu
+*   This script searches the Ignatian Article Application content items for matches to the
+*   user selected search parameters in the filter field dropdown menus
 *
-*   @version 4.2
+*   @version 5.0
 */
 
 
@@ -35,7 +35,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.ignatianArticle ').not('.hideByDropdownCategories, hideByText');
+                    visibleItems = $('.ignatianArticle ').not('.hideByElement, hideByText');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -89,14 +89,14 @@ $(function () {
                             let newValue = typeValue.replace(/\s*\(.*?\)\s*/g, '');
                             // Check to see if the Key and Value contain a Match
                             if (newValue.match(newKey)) {
-                                $(this).parents('.ignatianArticle ').removeClass('hideByDropdownCategories');
+                                $(this).parents('.ignatianArticle ').removeClass('hideByElement');
                             } else {
-                                $(this).parents('.ignatianArticle ').addClass('hideByDropdownCategories');
+                                $(this).parents('.ignatianArticle ').addClass('hideByElement');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.ignatianArticle ').removeClass('hideByDropdownCategories');
+                        $('.ignatianArticle ').removeClass('hideByElement');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
