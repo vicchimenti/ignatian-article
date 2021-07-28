@@ -164,14 +164,14 @@ $(function () {
 
             //   ***   Resource Filter   ***   //
             $(function () {
-                // When the Dropdown Menu Selector Course Type Changes - Execute change function
+                // When the Dropdown Menu Selector Resource Changes - Execute change function
                 $('#SelectBox-ByResource').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
-                        $('div.courses ul.categories').filter(function (i, e) {
+                        $('p.resource').filter(function (i, e) {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value contain a Match
                             if (typeValue.match(typeKey)) {
