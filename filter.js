@@ -35,7 +35,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.alumniVoice').not('.hideByDropdownCategories, hideByText');
+                    visibleItems = $('.ignatianArticle ').not('.hideByDropdownCategories, hideByText');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -59,7 +59,7 @@ $(function () {
                     let keyword = $(this).val().toLowerCase();
                     // filter the items for the input key
                     $(function () {
-                        $('.alumniVoice').filter(function () {
+                        $('.ignatianArticle ').filter(function () {
                             // when the search key is not present in the item then hide the item
                             $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
@@ -72,10 +72,10 @@ $(function () {
 
 
 
-            //   ***   Category Filter   ***   //
+            //   ***   Element Filter   ***   //
             $(function () {
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
-                $('#SelectBox-ByTopic').change(function () {
+                $('#SelectBox-ByElement').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // Account for values with parenthesis
@@ -89,14 +89,14 @@ $(function () {
                             let newValue = typeValue.replace(/\s*\(.*?\)\s*/g, '');
                             // Check to see if the Key and Value contain a Match
                             if (newValue.match(newKey)) {
-                                $(this).parents('.alumniVoice').removeClass('hideByDropdownCategories');
+                                $(this).parents('.ignatianArticle ').removeClass('hideByDropdownCategories');
                             } else {
-                                $(this).parents('.alumniVoice').addClass('hideByDropdownCategories');
+                                $(this).parents('.ignatianArticle ').addClass('hideByDropdownCategories');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.alumniVoice').removeClass('hideByDropdownCategories');
+                        $('.ignatianArticle ').removeClass('hideByDropdownCategories');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
