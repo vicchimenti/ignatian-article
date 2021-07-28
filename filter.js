@@ -7,7 +7,7 @@
 *   This script searches the Ignatian Article Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 5.0
+*   @version 5.1
 */
 
 
@@ -35,7 +35,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.ignatianArticle ').not('.hideByElement, hideByText');
+                    visibleItems = $('.ignatianArticle ').not('.hideByElement, .hideByLevel, hideByText');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -78,15 +78,11 @@ $(function () {
                 $('#SelectBox-ByElement').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
-                    // Account for values with parenthesis
-                    // let newKey = typeKey.replace(/\s*\(.*?\)\s*/g, '');
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
                         $('ul.categories').filter(function (i, e) {
                             let typeValue = $(this).text();
-                            // Account for values with parenthesis
-                            // let newValue = typeValue.replace(/\s*\(.*?\)\s*/g, '');
                             // Check to see if the Key and Value contain a Match
                             if (typeValue.match(typeKey)) {
                                 $(this).parents('.ignatianArticle ').removeClass('hideByElement');
@@ -97,6 +93,36 @@ $(function () {
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
                         $('.ignatianArticle ').removeClass('hideByElement');
+                    }
+                    // parse out unselected content items and limit display to user selected items
+                    parseItems.process();
+                });
+            });
+
+
+
+
+            //   ***   Level Filter   ***   //
+            $(function () {
+                // When the Dropdown Menu Selector Level Change - Execute change function
+                $('#SelectBox-ByLevel').change(function () {
+                    // Assign Search Key
+                    let typeKey = $(this).val();
+                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
+                    if (typeKey) {
+                        // search tags in each item
+                        $('ul.categories').filter(function (i, e) {
+                            let typeValue = $(this).text();
+                            // Check to see if the Key and Value contain a Match
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.ignatianArticle ').removeClass('hideByLevel');
+                            } else {
+                                $(this).parents('.ignatianArticle ').addClass('hideByLevel');
+                            }
+                        });
+                        // Else the Search Key is Null so Reset all Content Items to Visible
+                    } else {
+                        $('.ignatianArticle ').removeClass('hideByLevel');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
