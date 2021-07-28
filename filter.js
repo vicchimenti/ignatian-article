@@ -74,21 +74,21 @@ $(function () {
 
             //   ***   Element Filter   ***   //
             $(function () {
-                // When the Dropdown Menu Selector Course Types Change - Execute change function
+                // When the Dropdown Menu Selector Element Types Change - Execute change function
                 $('#SelectBox-ByElement').change(function () {
                     // Assign Search Key
                     let typeKey = $(this).val();
                     // Account for values with parenthesis
-                    let newKey = typeKey.replace(/\s*\(.*?\)\s*/g, '');
+                    // let newKey = typeKey.replace(/\s*\(.*?\)\s*/g, '');
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
-                    if (newKey) {
+                    if (typeKey) {
                         // search tags in each item
                         $('ul.categories').filter(function (i, e) {
                             let typeValue = $(this).text();
                             // Account for values with parenthesis
-                            let newValue = typeValue.replace(/\s*\(.*?\)\s*/g, '');
+                            // let newValue = typeValue.replace(/\s*\(.*?\)\s*/g, '');
                             // Check to see if the Key and Value contain a Match
-                            if (newValue.match(newKey)) {
+                            if (typeValue.match(typeKey)) {
                                 $(this).parents('.ignatianArticle ').removeClass('hideByElement');
                             } else {
                                 $(this).parents('.ignatianArticle ').addClass('hideByElement');
