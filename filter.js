@@ -35,7 +35,7 @@ $(function () {
             $(function () {
                 let parseItemsToDisplay = function() {
                     // assign array of currently visible content items
-                    visibleItems = $('.ignatianArticle ').not('hideByElement, hideByLevel, hideByCourse, hideByText');
+                    visibleItems = $('.ignatianArticle ').not('hideByElement, hideByLevel, hideByCourse, hideByResource, hideByText');
                     // check to see if array is empty
                     if (visibleItems.length == 0) {
                         // when array is empty show the results message
@@ -153,6 +153,36 @@ $(function () {
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
                         $('.ignatianArticle ').removeClass('hideByCourse');
+                    }
+                    // parse out unselected content items and limit display to user selected items
+                    parseItems.process();
+                });
+            });
+
+
+
+
+            //   ***   Resource Filter   ***   //
+            $(function () {
+                // When the Dropdown Menu Selector Course Type Changes - Execute change function
+                $('#SelectBox-ByResource').change(function () {
+                    // Assign Search Key
+                    let typeKey = $(this).val();
+                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
+                    if (typeKey) {
+                        // search tags in each item
+                        $('div.courses ul.categories').filter(function (i, e) {
+                            let typeValue = $(this).text();
+                            // Check to see if the Key and Value contain a Match
+                            if (typeValue.match(typeKey)) {
+                                $(this).parents('.ignatianArticle ').removeClass('hideByResource');
+                            } else {
+                                $(this).parents('.ignatianArticle ').addClass('hideByResource');
+                            }
+                        });
+                        // Else the Search Key is Null so Reset all Content Items to Visible
+                    } else {
+                        $('.ignatianArticle ').removeClass('hideByResource');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
