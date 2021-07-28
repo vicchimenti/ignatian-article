@@ -9,7 +9,7 @@
     padding: 0;
 }
 
-#filterFieldWrapper #voiceFilter legend{
+#filterFieldWrapper #ignatianFilter legend{
     border-bottom: none;
 }
 
@@ -81,7 +81,7 @@
     margin: 15px;
 }
 
-.hideByDropdownCategories, .hideByText, .hideResultsMessage { 
+.hideByDropdownCategories, .hideByText, .hideByElement, .hideResultsMessage { 
     display: none !important;
 }
 
