@@ -81,7 +81,7 @@
     margin: 15px;
 }
 
-.hideByDropdownCategories, .hideByText, .hideByElement, .hideResultsMessage { 
+.hideByText, .hideByElement, .hideByCourse, .hideByLevel, .hideByResource, .hideResultsMessage { 
     display: none !important;
 }
 
