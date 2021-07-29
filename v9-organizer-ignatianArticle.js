@@ -161,8 +161,8 @@
     if (level != "") {
         let arrayOfLevels = level.split(',');
         for (let i = 0; i < arrayOfLevels.length; i++) {
-            // let currentItem = arrayOfTags[i].trim();
-            listOfLevels += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+            let currentLevel = arrayOfTags[i].trim();
+            listOfLevels += '<li class="tag">' + currentLevel + '</li>';
         }
 
         // Print any tags that were selected
