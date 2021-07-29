@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.15
+   *     @version 6.16
    */
 
 
@@ -155,11 +155,6 @@
         // Print any tags that were selected
         listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
     }
-
-
-
-
-
 
 
 
