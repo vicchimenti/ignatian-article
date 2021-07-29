@@ -62,7 +62,6 @@
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"></ul></div>';
     var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"></ul></div>';
-    var courseItems = '';
     var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"></ul></div>';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
@@ -170,6 +169,8 @@
      * 
      * */
     if (courses != "") {
+
+        let courseItems = '';
         let arrayOfCourses = courses.split(',');
         for (let i = 0; i < arrayOfCourses.length; i++) {
             courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
