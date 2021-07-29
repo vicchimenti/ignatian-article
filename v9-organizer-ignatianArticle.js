@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.17
+   *     @version 6.18
    */
 
 
@@ -111,7 +111,7 @@
      *  Parse for author
      * 
      * */
-    if (author != "") {
+    if (author) {
         byLine = '<p class="card-text author"><strong>By ' + author + '</strong></p>';
     }
 
@@ -122,7 +122,7 @@
      *  Parse for Setting
      * 
      * */
-    if (topicSetting != "") {
+    if (topicSetting) {
         topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting: </strong>' + topicSetting + '</p>';
     }
 
@@ -133,7 +133,7 @@
      *  Parse for Resource
      * 
      * */
-    if (resource != "") {
+    if (resource) {
         resourceString = '<p class="card-text resource"><strong class="articleLabel">Resource: </strong>' + resource + '</p>';
     }
 
