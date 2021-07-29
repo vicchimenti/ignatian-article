@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.10
+   *     @version 6.12
    */
 
 
@@ -161,12 +161,35 @@
     if (level != "") {
         let arrayOfLevels = level.split(',');
         for (let i = 0; i < arrayOfLevels.length; i++) {
-            let currentLevel = arrayOfTags[i].trim();
-            listOfLevels += '<li class="tag">' + currentLevel + '</li>';
+            let currentLevel = arrayOfLevels[i].trim();
+            levelItems += '<li class="tag">' + currentLevel + '</li>';
         }
 
         // Print any tags that were selected
-        listOfLevels = '<div class="newsroomArticle tags level"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + listItems + '</ul></div>';
+        listOfLevels = '<div class="newsroomArticle tags level"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
+    }
+
+
+
+
+
+
+
+
+
+    /***
+     *  parse the list of courses tags, add <li> tags
+     * 
+     * */
+    if (courses != "") {
+        var arrayOfCourses = courses.split(',');
+        for (let i = 0; i < arrayOfCourses.length; i++) {
+            let currentCourse = arrayOfCourses[i].trim();
+            courseItems += '<li class="tag">' + currentCourse + '</li>';
+        }
+
+        // Print any tags that were selected
+        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
     }
 
 
@@ -185,24 +208,6 @@
 
         // Print any tags that were selected
         listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy: </strong><ul class="categories">' + listItems + '</ul></div>';
-    }
-
-
-
-
-    /***
-     *  parse the list of courses tags, add <li> tags
-     * 
-     * */
-    if (courses != "") {
-        var arrayOfCourses = courses.split(',');
-        for (let i = 0; i < arrayOfCourses.length; i++) {
-            let currentCourse = arrayOfCourses[i].trim();
-            courseItems += '<li class="tag">' + currentCourse + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
     }
 
 
