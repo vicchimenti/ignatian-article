@@ -144,7 +144,7 @@
      *  parse the list of level tags, add <li> tags
      * 
      * */
-    if (level != "") {
+    if (level) {
 
         let levelItems = '';
         let arrayOfLevels = level.split(',');
@@ -163,7 +163,7 @@
      *  parse the list of courses tags, add <li> tags
      * 
      * */
-    if (courses != "") {
+    if (courses) {
 
         let courseItems = '';
         let arrayOfCourses = courses.split(',');
@@ -182,7 +182,7 @@
      *  parse the list of topics tags, add <li> tags
      * 
      * */
-    if (topics != "") {
+    if (topics) {
 
         let listItems = '';
         let arrayOfTags = topics.split(',');
