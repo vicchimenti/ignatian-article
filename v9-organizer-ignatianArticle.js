@@ -123,7 +123,7 @@
      * 
      * */
     if (topicSetting != "") {
-        topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
+        topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting: </strong>' + topicSetting + '</p>';
     }
 
 
@@ -134,7 +134,7 @@
      * 
      * */
     if (resource != "") {
-        resourceString = '<p class="card-text resource"><strong class="articleLabel">Resource:</strong> ' + resource + '</p>';
+        resourceString = '<p class="card-text resource"><strong class="articleLabel">Resource: </strong>' + resource + '</p>';
     }
 
 
