@@ -64,7 +64,6 @@
     var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"></ul></div>';
     var courseItems = '';
     var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"></ul></div>';
-    var levelItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var levelString = '<p class="card-text level hidden visually-hidden">No Level Provided</p>';
@@ -147,6 +146,8 @@
      * 
      * */
     if (level != "") {
+
+        let levelItems = '';
         let arrayOfLevels = level.split(',');
         for (let i = 0; i < arrayOfLevels.length; i++) {
             levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
@@ -186,7 +187,7 @@
      * 
      * */
     if (topics != "") {
-        
+
         let listItems = '';
         let arrayOfTags = topics.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
