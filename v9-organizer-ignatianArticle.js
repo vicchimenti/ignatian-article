@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.13
+   *     @version 6.14
    */
 
 
@@ -150,8 +150,8 @@
     if (level != "") {
         let arrayOfLevels = level.split(',');
         for (let i = 0; i < arrayOfLevels.length; i++) {
-            let currentLevel = arrayOfLevels[i].trim();
-            levelItems += '<li class="tag">' + currentLevel + '</li>';
+            // let currentLevel = arrayOfLevels[i].trim();
+            levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
         }
 
         // Print any tags that were selected
@@ -173,8 +173,8 @@
     if (courses != "") {
         var arrayOfCourses = courses.split(',');
         for (let i = 0; i < arrayOfCourses.length; i++) {
-            let currentCourse = arrayOfCourses[i].trim();
-            courseItems += '<li class="tag">' + currentCourse + '</li>';
+            // let currentCourse = arrayOfCourses[i].trim();
+            courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
         }
 
         // Print any tags that were selected
@@ -191,8 +191,8 @@
     if (topics != "") {
         var arrayOfTags = topics.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
-            let currentItem = arrayOfTags[i].trim();
-            listItems += '<li class="tag">' + currentItem + '</li>';
+            // let currentItem = arrayOfTags[i].trim();
+            listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
         }
 
         // Print any tags that were selected
