@@ -170,7 +170,7 @@
      * 
      * */
     if (courses != "") {
-        var arrayOfCourses = courses.split(',');
+        let arrayOfCourses = courses.split(',');
         for (let i = 0; i < arrayOfCourses.length; i++) {
             courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
         }
@@ -187,7 +187,7 @@
      * 
      * */
     if (topics != "") {
-        var arrayOfTags = topics.split(',');
+        let arrayOfTags = topics.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
             listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
         }
