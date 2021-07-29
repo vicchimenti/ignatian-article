@@ -150,7 +150,6 @@
     if (level != "") {
         let arrayOfLevels = level.split(',');
         for (let i = 0; i < arrayOfLevels.length; i++) {
-            // let currentLevel = arrayOfLevels[i].trim();
             levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
         }
 
@@ -173,7 +172,6 @@
     if (courses != "") {
         var arrayOfCourses = courses.split(',');
         for (let i = 0; i < arrayOfCourses.length; i++) {
-            // let currentCourse = arrayOfCourses[i].trim();
             courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
         }
 
@@ -191,7 +189,6 @@
     if (topics != "") {
         var arrayOfTags = topics.split(',');
         for (let i = 0; i < arrayOfTags.length; i++) {
-            // let currentItem = arrayOfTags[i].trim();
             listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
         }
 
