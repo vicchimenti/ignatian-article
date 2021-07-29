@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.9
+   *     @version 6.10
    */
 
 
@@ -60,10 +60,12 @@
     var summaryString = '<p class="card-text summaryText">' + articleSummary + '</p>';
     var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong class="articleLabel">Year:</strong> ' + publishDate + '</p>';
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-    var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul></ul></div>';
+    var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"></ul></div>';
     var listItems = '';
-    var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul></ul></div>';
+    var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"></ul></div>';
     var courseItems = '';
+    var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"></ul></div>';
+    var levelItems = '';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var levelString = '<p class="card-text level hidden visually-hidden">No Level Provided</p>';
@@ -134,9 +136,9 @@
      *  Parse for Level
      * 
      * */
-    if (level != "") {
-        levelString = '<p class="card-text level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
-    }
+    // if (level != "") {
+    //     levelString = '<p class="card-text level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
+    // }
 
 
 
@@ -153,7 +155,25 @@
 
 
     /***
-     *  parse the list of tags, add <li> tags
+     *  parse the list of level tags, add <li> tags
+     * 
+     * */
+    if (level != "") {
+        let arrayOfLevels = level.split(',');
+        for (let i = 0; i < arrayOfLevels.length; i++) {
+            // let currentItem = arrayOfTags[i].trim();
+            listOfLevels += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+        }
+
+        // Print any tags that were selected
+        listOfLevels = '<div class="newsroomArticle tags level"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + listItems + '</ul></div>';
+    }
+
+
+
+
+    /***
+     *  parse the list of topics tags, add <li> tags
      * 
      * */
     if (topics != "") {
@@ -171,7 +191,7 @@
 
 
     /***
-     *  parse the list of tags, add <li> tags
+     *  parse the list of courses tags, add <li> tags
      * 
      * */
     if (courses != "") {
@@ -206,7 +226,7 @@
     document.write(dateString);
     document.write(topicSettingString);
     document.write(resourceString);
-    document.write(levelString);
+    document.write(listOfLevels);
     document.write(listOfCourses);
     document.write(listOfTags);
     document.write(closeSummaryWrapper);
