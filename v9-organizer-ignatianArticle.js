@@ -164,7 +164,7 @@
         }
 
         // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text pedagogy articleLabel">Ignatian Pedagogy: </strong><ul class="categories">' + listItems + '</ul></div>';
+        listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy: </strong><ul class="categories">' + listItems + '</ul></div>';
     }
 
 
@@ -205,8 +205,8 @@
     document.write(summaryString);
     document.write(dateString);
     document.write(topicSettingString);
-    document.write(levelString);
     document.write(resourceString);
+    document.write(levelString);
     document.write(listOfCourses);
     document.write(listOfTags);
     document.write(closeSummaryWrapper);
