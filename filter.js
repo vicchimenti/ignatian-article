@@ -7,7 +7,7 @@
 *   This script searches the Ignatian Article Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 5.2
+*   @version 5.3
 */
 
 
@@ -81,7 +81,7 @@ $(function () {
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
-                        $('ul.categories').filter(function (i, e) {
+                        $('div.pedagogy ul.categories').filter(function (i, e) {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value contain a Match
                             if (typeValue.match(typeKey)) {
@@ -111,7 +111,7 @@ $(function () {
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
-                        $('p.level').filter(function (i, e) {
+                        $('div.levels ul.categories').filter(function (i, e) {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value contain a Match
                             if (typeValue.match(typeKey)) {
