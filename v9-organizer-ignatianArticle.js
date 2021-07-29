@@ -133,17 +133,6 @@
 
 
     /***
-     *  Parse for Level
-     * 
-     * */
-    // if (level != "") {
-    //     levelString = '<p class="card-text level"><strong class="articleLabel">Level:</strong> ' + level + '</p>';
-    // }
-
-
-
-
-    /***
      *  Parse for Resource
      * 
      * */
