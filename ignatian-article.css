@@ -37,6 +37,9 @@ div.newsroomArticle.tags strong {
 }
 
 
-.ignatianArticle div.newsroomArticle.tags {
-    width: unset;
+/* Mobile layouts below 992 */
+@media screen and (max-width: 991.99px) {
+    .ignatianArticle div.newsroomArticle.tags {
+        width: unset;
+    }
 }
