@@ -35,3 +35,8 @@ div.newsroomArticle.tags strong {
 .ignatianArticle .standardContent ul li:before {
     content: unset;
 }
+
+
+.ignatianArticle div.newsroomArticle.tags {
+    width: unset;
+}
