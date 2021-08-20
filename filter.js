@@ -206,10 +206,10 @@ $(function () {
                     if (resourceKeys[0] != -1) {
                         $('span.resourceType').filter(function (i, e) {
                             // allow any to show all
-                            // let any = "any";
+                            let any = "any";
                             let resourceValue = $(this).text();
                             // when the any radio is checked, show all items
-                            if (resourceValue === 'any') {
+                            if (resourceValue === any) {
                                 $('.ignatianArticle').removeClass('hideByResource');
                             } else {
                                 // set state to hidden for all items
