@@ -205,14 +205,21 @@ $(function () {
                     // If Search Key array has at least one valid value then Compare to the Each Content Item in year
                     if (resourceKeys[0] != -1) {
                         $('span.resourceType').filter(function (i, e) {
+                            // allow any to show all
+                            // let any = "any";
                             let resourceValue = $(this).text();
-                            // set state to hidden for all items
-                            $(this).parents('.ignatianArticle').addClass('hideByResource');
-                            // Check to see if any Key is a match with the current Value
-                            for (let index = 0; index < resourceKeys.length; index++) {
-                                if (resourceValue.match(resourceKeys[index])) {
-                                    // make current item visible when we validate a match
-                                    $(this).parents('.ignatianArticle').removeClass('hideByResource');
+                            // when the any radio is checked, show all items
+                            if (resourceValue === 'any') {
+                                $('.ignatianArticle').removeClass('hideByResource');
+                            } else {
+                                // set state to hidden for all items
+                                $(this).parents('.ignatianArticle').addClass('hideByResource');
+                                // Check to see if any Key is a match with the current Value
+                                for (let index = 0; index < resourceKeys.length; index++) {
+                                    if (resourceValue.match(resourceKeys[index])) {
+                                        // make current item visible when we validate a match
+                                        $(this).parents('.ignatianArticle').removeClass('hideByResource');
+                                    }
                                 }
                             }
                         });
