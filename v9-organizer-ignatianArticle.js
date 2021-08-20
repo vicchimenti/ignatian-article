@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.22
+   *     @version 6.23
    */
 
 
@@ -41,6 +41,7 @@
 
       
 
+
     /***
      *  default initializations
      * 
@@ -67,9 +68,6 @@
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
     var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
-
-
-
 
 
 
@@ -227,6 +225,7 @@
     document.write(dateString);
     document.write(topicSettingString);
     document.write(resourceString);
+    document.write(programString);
     document.write(listOfLevels);
     document.write(listOfCourses);
     document.write(listOfTags);
