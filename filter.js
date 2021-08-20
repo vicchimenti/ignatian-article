@@ -101,6 +101,33 @@ $(function () {
 
 
 
+            //   ***  Ignatian Element Multi-Select Filter    ***   //
+            $(function () {
+                $('#SelectBox-ByElement').change(function () {
+                    let levelKeys = [];
+                    levelKeys[0] = 'Any';
+                    $('input[name=SelectBox-ByElement]:checked').each(function (item) {
+                        levelKeys[item] = $(this).val();
+                    });
+                    if (levelKeys[0] != "Any") {
+                        $('div.levels ul.categories').filter(function (i, e) {
+                            let levelValue = $(this).text();
+                            $(this).parents('.ignatianArticle').addClass('hideByElement');
+                            for (let index = 0; index < levelKeys.length; index++) {
+                                if (levelValue.includes(levelKeys[index])) {
+                                    $(this).parents('.ignatianArticle').removeClass('hideByElement');
+                                }
+                            }
+                        });
+                    } else {
+                        $('.ignatianArticle').removeClass('hideByElement');
+                    }
+                    parseItems.process();
+                });
+            });
+
+
+
             //   ***   Level Multi-Select Filter    ***   //
             $(function () {
                 $('#SelectBox-ByLevel').change(function () {
