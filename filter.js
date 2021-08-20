@@ -7,7 +7,7 @@
 *   This script searches the Ignatian Article Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 5.5
+*   @version 5.6
 */
 
 
