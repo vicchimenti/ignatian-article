@@ -149,7 +149,7 @@ $(function () {
                             let courseValue = $(this).text();
                             // set state to hidden for all items
                             $(this).parents('.ignatianArticle').addClass('hideByCourse');
-                            // Check to see if any Key is a match with the current Value
+                            // Check to see if any Keys are a match with the Value
                             for (let index = 0; index < courseKeys.length; index++) {
                                 if (courseValue.includes(courseKeys[index])) {
                                     // make current item visible when we validate a match
