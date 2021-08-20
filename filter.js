@@ -1,13 +1,13 @@
 <script>
 /***
-*   @author Victor Chimenti, MSCS-SE '20
+*   @author Victor Chimenti, MSCS
 *   @file filter.js
 *
 *   jQuery
 *   This script searches the Ignatian Article Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 5.3
+*   @version 5.4
 */
 
 
