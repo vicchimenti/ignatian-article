@@ -62,7 +62,7 @@
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"></ul></div>';
     var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"></ul></div>';
-    var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories hidden visually-hidden"><li class="tag hidden visually-hidden">No Levels Provided</li></ul></div><br>';
+    var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories hidden visually-hidden"><li class="tag hidden visually-hidden">No Levels Provided</li></ul></div>';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var resourceString = '<p class="card-text resource hidden visually-hidden">Not Provided</p>';
