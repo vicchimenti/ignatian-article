@@ -195,11 +195,11 @@ $(function () {
 
                 // When the Multi-Select Checkbox Selector for Calendar Year Changes - Execute change function 
 
-                $('#SelectBox-ByResource').change(function () {
+                $('#SelectBox-ByActivity').change(function () {
                     // initialize an array of keys to hold each check box selected
                     let resourceKeys = [];
                     resourceKeys[0] = -1;
-                    $('input[name=SelectBox-ByResource]:checked').each(function (item) {
+                    $('input[name=SelectBox-ByActivity]:checked').each(function (item) {
                         resourceKeys[item] = $(this).val();
                     });
                     // If Search Key array has at least one valid value then Compare to the Each Content Item in year
