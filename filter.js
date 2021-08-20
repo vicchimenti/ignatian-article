@@ -192,38 +192,31 @@ $(function () {
 
             //   ***   Resource/Activity Filter   ***   //
             $(function () {
-
                 // When the Radio Checkbox Selector for Resource/Activity Changes - Execute change function 
-
                 $('#SelectBox-ByActivity').change(function () {
                     // initialize an array of keys to hold each check box selected
                     let resourceKeys = [];
-                    resourceKeys[0] = -1;
+                    // set default value to show all items
+                    resourceKeys[0] = 'Any';
+                    // inspect each radio button to see which is checked
                     $('input[name=SelectBox-ByActivity]:checked').each(function (item) {
                         resourceKeys[item] = $(this).val();
                     });
-                    // If Search Key array has at least one valid value then Compare to the Each Content Item in year
-                    if (resourceKeys[0] != -1) {
+                    // If Search Key array has at least one valid value then Compare to the Each Content Item
+                    if (resourceKeys[0] != "Any") {
                         $('span.resourceType').filter(function (i, e) {
-                            // allow any to show all
-                            let any = "Any";
                             let resourceValue = $(this).text();
-                            // when the any radio is checked, show all items
-                            if (resourceValue == any) {
-                                $('.ignatianArticle').removeClass('hideByResource');
-                            } else {
-                                // set state to hidden for all items
-                                $(this).parents('.ignatianArticle').addClass('hideByResource');
-                                // Check to see if any Key is a match with the current Value
-                                for (let index = 0; index < resourceKeys.length; index++) {
-                                    if (resourceValue.match(resourceKeys[index])) {
-                                        // make current item visible when we validate a match
-                                        $(this).parents('.ignatianArticle').removeClass('hideByResource');
-                                    }
+                            // set state to hidden for all items
+                            $(this).parents('.ignatianArticle').addClass('hideByResource');
+                            // Check to see if any Key is a match with the current Value
+                            for (let index = 0; index < resourceKeys.length; index++) {
+                                if (resourceValue.match(resourceKeys[index])) {
+                                    // make current item visible when we validate a match
+                                    $(this).parents('.ignatianArticle').removeClass('hideByResource');
                                 }
                             }
                         });
-                        // Else the Search Key is Null so Reset all Content Items to Visible
+                    // Else the Search Key is set to Any so Reset all Content Items to Visible
                     } else {
                         $('.ignatianArticle').removeClass('hideByResource');
                     }
