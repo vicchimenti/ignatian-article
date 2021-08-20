@@ -190,7 +190,7 @@ $(function () {
             });
 
 
-            //   ***   Resource/Activity Filter   ***   //
+            //   ***   Resource/Activity Radio Filter   ***   //
             $(function () {
                 // When the Radio Checkbox Selector for Resource/Activity Changes - Execute change function 
                 $('#SelectBox-ByActivity').change(function () {
