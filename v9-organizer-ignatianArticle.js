@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.20
+   *     @version 6.21
    */
 
 
@@ -62,7 +62,7 @@
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
     var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"></ul></div>';
     var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"></ul></div>';
-    var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"></ul></div>';
+    var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories hidden visually-hidden"><li class="tag hidden visually-hidden">No Levels Provided</li></ul></div><br>';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var resourceString = '<p class="card-text resource hidden visually-hidden">Not Provided</p>';
@@ -110,7 +110,7 @@
      *  Parse for author
      * 
      * */
-    if (author) {
+    if (author != "") {
         byLine = '<p class="card-text author"><strong>By ' + author + '</strong></p>';
     }
 
@@ -121,7 +121,7 @@
      *  Parse for Setting
      * 
      * */
-    if (topicSetting) {
+    if (topicSetting != "") {
         topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting: </strong>' + topicSetting + '</p>';
     }
 
@@ -132,7 +132,7 @@
      *  Parse for Resource
      * 
      * */
-    if (resource) {
+    if (resource != "") {
         resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
     }
 
@@ -162,7 +162,7 @@
      *  parse the list of courses tags, add <li> tags
      * 
      * */
-    if (courses) {
+    if (courses != "") {
 
         let courseItems = '';
         let arrayOfCourses = courses.split(',');
@@ -181,7 +181,7 @@
      *  parse the list of topics tags, add <li> tags
      * 
      * */
-    if (topics) {
+    if (topics != "") {
 
         let listItems = '';
         let arrayOfTags = topics.split(',');
