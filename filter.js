@@ -175,12 +175,12 @@ $(function () {
                     // If Search Key array has at least one valid value then Compare to the Each Content Item
                     if (courseKeys[0] != "Any") {
                         $('div.courses ul.categories').filter(function (i, e) {
-                            let resourceValue = $(this).text();
+                            let courseValue = $(this).text();
                             // set state to hidden for all items
                             $(this).parents('.ignatianArticle').addClass('hideByCourse');
                             // Check to see if any Key is a match with the current Value
                             for (let index = 0; index < courseKeys.length; index++) {
-                                if (resourceValue.match(courseKeys[index])) {
+                                if (courseValue.match(courseKeys[index])) {
                                     // make current item visible when we validate a match
                                     $(this).parents('.ignatianArticle').removeClass('hideByCourse');
                                 }
