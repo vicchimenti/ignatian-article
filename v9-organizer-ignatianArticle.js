@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.24
+   *     @version 6.25
    */
 
 
@@ -61,8 +61,8 @@
     var summaryString = '<p class="card-text summaryText">' + articleSummary + '</p>';
     var dateString = '<p class="card-text fw-bold font-weight-bold publishDate"><strong class="articleLabel">Year: </strong>' + publishDate + '</p>';
     var externalLinkString = '<span class="externalLink hidden">No Proper Link Provided</span>';
-    var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><span class="categories hidden visually-hidden">No Pedagogy Provided</span></div>';
-    var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><span class="categories hidden visually-hidden">No Course Type Provided</span></div>';
+    var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"><li class="tag">No Pedagogy Provided</li></ul></div>';
+    var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"><li class="tag">No Course Type Provided</li></ul></div>';
     var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"><li class="tag">No Level Provided</li></ul></div>';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
