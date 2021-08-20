@@ -160,6 +160,42 @@ $(function () {
             });
 
 
+            //   ***   Course Filter Multi-Select Filter   ***   //
+            $(function () {
+                // When the Radio Checkbox Selector for Resource/Activity Changes - Execute change function 
+                $('#SelectBox-ByCourse').change(function () {
+                    // initialize an array of keys to hold each check box selected
+                    let resourceKeys = [];
+                    // set default value to show all items
+                    resourceKeys[0] = 'Any';
+                    // inspect each radio button to see which is checked
+                    $('input[name=SelectBox-ByCourse]:checked').each(function (item) {
+                        resourceKeys[item] = $(this).val();
+                    });
+                    // If Search Key array has at least one valid value then Compare to the Each Content Item
+                    if (resourceKeys[0] != "Any") {
+                        $('span.resourceType').filter(function (i, e) {
+                            let resourceValue = $(this).text();
+                            // set state to hidden for all items
+                            $(this).parents('.ignatianArticle').addClass('hideByCourse');
+                            // Check to see if any Key is a match with the current Value
+                            for (let index = 0; index < resourceKeys.length; index++) {
+                                if (resourceValue.match(resourceKeys[index])) {
+                                    // make current item visible when we validate a match
+                                    $(this).parents('.ignatianArticle').removeClass('hideByCourse');
+                                }
+                            }
+                        });
+                    // Else the Search Key is set to Any so Reset all Content Items to Visible
+                    } else {
+                        $('.ignatianArticle').removeClass('hideByCourse');
+                    }
+                    // parse out unselected content items and limit display to user selected items
+                    parseItems.process();
+                });
+            });
+
+
 
 
             //   ***   Resource/Activity Radio Filter   ***   //
