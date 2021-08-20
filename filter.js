@@ -174,7 +174,7 @@ $(function () {
                     });
                     // If Search Key array has at least one valid value then Compare to the Each Content Item
                     if (resourceKeys[0] != "Any") {
-                        $('span.resourceType').filter(function (i, e) {
+                        $('div.courses ul.categories').filter(function (i, e) {
                             let resourceValue = $(this).text();
                             // set state to hidden for all items
                             $(this).parents('.ignatianArticle').addClass('hideByCourse');
