@@ -66,7 +66,7 @@
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var levelString = '<p class="card-text level hidden visually-hidden">No Level Provided</p>';
-    var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
+    var resourceString = '<p class="card-text resource hidden visually-hidden">No Activity Type Provided</p>';
 
 
 
@@ -134,7 +134,7 @@
      * 
      * */
     if (resource) {
-        resourceString = '<p class="card-text resource"><strong class="articleLabel">Resource: </strong>' + resource + '</p>';
+        resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong>' + resource + '</p>';
     }
 
 
