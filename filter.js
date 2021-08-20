@@ -133,35 +133,25 @@ $(function () {
 
             //   ***   Level Multi-Select Filter    ***   //
             $(function () {
-                // When the Radio Checkbox Selector for Resource/Activity Changes - Execute change function 
                 $('#SelectBox-ByLevel').change(function () {
-                    // initialize an array of keys to hold each check box selected
                     let levelKeys = [];
-                    // set default value to show all items
                     levelKeys[0] = 'Any';
-                    // inspect each radio button to see which is checked
                     $('input[name=SelectBox-ByLevel]:checked').each(function (item) {
                         levelKeys[item] = $(this).val();
                     });
-                    // If Search Key array has at least one valid value then Compare to the Each Content Item
                     if (levelKeys[0] != "Any") {
-                        $('div.courses ul.categories').filter(function (i, e) {
-                            let courseValue = $(this).text();
-                            // set state to hidden for all items
-                            $(this).parents('.ignatianArticle').addClass('hideByCourse');
-                            // Check to see if any Keys are a match with the Value
+                        $('div.levels ul.categories').filter(function (i, e) {
+                            let levelValue = $(this).text();
+                            $(this).parents('.ignatianArticle').addClass('hideByLevel');
                             for (let index = 0; index < levelKeys.length; index++) {
-                                if (courseValue.includes(levelKeys[index])) {
-                                    // make current item visible when we validate a match
-                                    $(this).parents('.ignatianArticle').removeClass('hideByCourse');
+                                if (levelValue.includes(levelKeys[index])) {
+                                    $(this).parents('.ignatianArticle').removeClass('hideByLevel');
                                 }
                             }
                         });
-                    // Else the Search Key is set to Any so Reset all Content Items to Visible
                     } else {
-                        $('.ignatianArticle').removeClass('hideByCourse');
+                        $('.ignatianArticle').removeClass('hideByLevel');
                     }
-                    // parse out unselected content items and limit display to user selected items
                     parseItems.process();
                 });
             });
