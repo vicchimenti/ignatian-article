@@ -175,14 +175,50 @@ $(function () {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value contain a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.ignatianArticle ').removeClass('hideByResource');
+                                $(this).parents('.ignatianArticle').removeClass('hideByResource');
                             } else {
-                                $(this).parents('.ignatianArticle ').addClass('hideByResource');
+                                $(this).parents('.ignatianArticle').addClass('hideByResource');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
                         $('.ignatianArticle ').removeClass('hideByResource');
+                    }
+                    // parse out unselected content items and limit display to user selected items
+                    parseItems.process();
+                });
+            });
+
+
+            //   ***   Resource/Activity Filter   ***   //
+            $(function () {
+
+                // When the Multi-Select Checkbox Selector for Calendar Year Changes - Execute change function 
+
+                $('#SelectBox-ByResource').change(function () {
+                    // initialize an array of keys to hold each check box selected
+                    let resourceKeys = [];
+                    resourceKeys[0] = -1;
+                    $('input[name=SelectBox-ByResource]:checked').each(function (item) {
+                        resourceKeys[item] = $(this).val();
+                    });
+                    // If Search Key array has at least one valid value then Compare to the Each Content Item in year
+                    if (resourceKeys[0] != -1) {
+                        $('span.resourceType').filter(function (i, e) {
+                            let resourceValue = $(this).text();
+                            // set state to hidden for all items
+                            $(this).parents('.ignatianArticle').addClass('hideByResource');
+                            // Check to see if any Key is a match with the current Value
+                            for (let index = 0; index < resourceKeys.length; index++) {
+                                if (resourceValue.match(resourceKeys[index])) {
+                                    // make current item visible when we validate a match
+                                    $(this).parents('.ignatianArticle').removeClass('hideByResource');
+                                }
+                            }
+                        });
+                        // Else the Search Key is Null so Reset all Content Items to Visible
+                    } else {
+                        $('.ignatianArticle').removeClass('hideByResource');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
