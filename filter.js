@@ -171,7 +171,7 @@ $(function () {
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         // search tags in each item
-                        $('p.resource').filter(function (i, e) {
+                        $('span.resourceType').filter(function (i, e) {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value contain a Match
                             if (typeValue.match(typeKey)) {
