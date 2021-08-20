@@ -193,7 +193,7 @@ $(function () {
             //   ***   Resource/Activity Filter   ***   //
             $(function () {
 
-                // When the Multi-Select Checkbox Selector for Calendar Year Changes - Execute change function 
+                // When the Radio Checkbox Selector for Resource/Activity Changes - Execute change function 
 
                 $('#SelectBox-ByActivity').change(function () {
                     // initialize an array of keys to hold each check box selected
