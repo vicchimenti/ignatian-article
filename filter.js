@@ -180,7 +180,7 @@ $(function () {
                             $(this).parents('.ignatianArticle').addClass('hideByCourse');
                             // Check to see if any Key is a match with the current Value
                             for (let index = 0; index < courseKeys.length; index++) {
-                                if (courseValue.match(courseKeys[index])) {
+                                if (courseValue.includes(courseKeys[index])) {
                                     // make current item visible when we validate a match
                                     $(this).parents('.ignatianArticle').removeClass('hideByCourse');
                                 }
