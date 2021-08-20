@@ -65,7 +65,6 @@
     var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"></ul></div>';
     var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
-    var levelString = '<p class="card-text level hidden visually-hidden">No Level Provided</p>';
     var resourceString = '<p class="card-text resource hidden visually-hidden">Not Provided</p>';
 
 
@@ -144,7 +143,7 @@
      *  parse the list of level tags, add <li> tags
      * 
      * */
-    if (level) {
+    if (level != "") {
 
         let levelItems = '';
         let arrayOfLevels = level.split(',');
