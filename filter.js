@@ -7,7 +7,7 @@
 *   This script searches the Ignatian Article Application content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 5.7
+*   @version 5.8
 */
 
 
@@ -104,17 +104,17 @@ $(function () {
             //   ***  Ignatian Element Multi-Select Filter    ***   //
             $(function () {
                 $('#SelectBox-ByElement').change(function () {
-                    let levelKeys = [];
-                    levelKeys[0] = 'Any';
+                    let elementKeys = [];
+                    elementKeys[0] = 'Any';
                     $('input[name=SelectBox-ByElement]:checked').each(function (item) {
-                        levelKeys[item] = $(this).val();
+                        elementKeys[item] = $(this).val();
                     });
-                    if (levelKeys[0] != "Any") {
-                        $('div.levels ul.categories').filter(function (i, e) {
-                            let levelValue = $(this).text();
+                    if (elementKeys[0] != "Any") {
+                        $('div.pedagogy ul.categories').filter(function (i, e) {
+                            let elementValue = $(this).text();
                             $(this).parents('.ignatianArticle').addClass('hideByElement');
-                            for (let index = 0; index < levelKeys.length; index++) {
-                                if (levelValue.includes(levelKeys[index])) {
+                            for (let index = 0; index < elementKeys.length; index++) {
+                                if (elementValue.includes(elementKeys[index])) {
                                     $(this).parents('.ignatianArticle').removeClass('hideByElement');
                                 }
                             }
