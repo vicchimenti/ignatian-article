@@ -7,4 +7,6 @@ A bibliography application
 - [x] render tags
 - [x] build fulltext
 - [x] test with images
-- [] build filter engine
+- [x] build filter engine
+- [] refine fulltext
+- [] reduce summary view
