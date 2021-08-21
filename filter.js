@@ -101,7 +101,7 @@ $(function () {
 
 
 
-            //   ***  Ignatian Element Multi-Select Filter    ***   //
+            //   ***  Ignatian Element Multi-Select Checkbox Filter    ***   //
             $(function () {
                 $('#SelectBox-ByElement').change(function () {
                     let elementKeys = [];
@@ -128,7 +128,7 @@ $(function () {
 
 
 
-            //   ***   Level Multi-Select Filter    ***   //
+            //   ***   Level Multi-Select Checkbox Filter    ***   //
             $(function () {
                 $('#SelectBox-ByLevel').change(function () {
                     let levelKeys = [];
@@ -155,7 +155,7 @@ $(function () {
 
 
 
-            //   ***   Course Filter Multi-Select Filter   ***   //
+            //   ***   Course Filter Multi-Select Checkbox Filter with detailed checkbox comments   ***   //
             $(function () {
                 // When the Radio Checkbox Selector for Resource/Activity Changes - Execute change function 
                 $('#SelectBox-ByCourse').change(function () {
