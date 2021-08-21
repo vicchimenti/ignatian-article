@@ -71,36 +71,6 @@ $(function () {
 
 
 
-
-            //   ***   Element Filter   ***   //
-            $(function () {
-                // When the Dropdown Menu Selector Element Types Change - Execute change function
-                $('#SelectBox-ByElement').change(function () {
-                    // Assign Search Key
-                    let typeKey = $(this).val();
-                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
-                    if (typeKey) {
-                        // search tags in each item
-                        $('div.pedagogy ul.categories').filter(function (i, e) {
-                            let typeValue = $(this).text();
-                            // Check to see if the Key and Value contain a Match
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.ignatianArticle ').removeClass('hideByElement');
-                            } else {
-                                $(this).parents('.ignatianArticle ').addClass('hideByElement');
-                            }
-                        });
-                        // Else the Search Key is Null so Reset all Content Items to Visible
-                    } else {
-                        $('.ignatianArticle ').removeClass('hideByElement');
-                    }
-                    // parse out unselected content items and limit display to user selected items
-                    parseItems.process();
-                });
-            });
-
-
-
             //   ***  Ignatian Element Multi-Select Checkbox Filter    ***   //
             $(function () {
                 $('#SelectBox-ByElement').change(function () {
