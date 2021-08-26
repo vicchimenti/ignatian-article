@@ -69,6 +69,10 @@ div.newsroomArticle.tags strong {
         line-height: 1.2;
     }
 
+    .ignatianArticle .articleSummary p.summaryText {
+        font-size: 1.5rem;
+    }
+
     .ignatianArticle hr.articleBorderBottom {
         border-top: 3px solid #e5e5e5;
         display: block;
