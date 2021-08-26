@@ -39,3 +39,14 @@ div.newsroomArticle.tags strong {
 .ignatianArticle .standardContent ul li:before {
     content: unset;
 }
+
+.ignatianArticle .articleBody .externalLink a {
+    color: #088099;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.ignatianArticle .articleBody .externalLink a:hover {
+    text-decoration: underline;
+}
