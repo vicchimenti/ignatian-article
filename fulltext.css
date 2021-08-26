@@ -52,6 +52,6 @@ div.newsroomArticle.tags strong {
     text-decoration: underline;
 }
 
-.ignatianArticle .articleBody .singleTag {
+.ignatianArticle .articleBody p.singleTag {
     line-height: 2;
 }
