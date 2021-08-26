@@ -140,6 +140,8 @@
 
 
 
+
+
       /***
        *  Parse for photo credit
        * 
@@ -194,25 +196,12 @@
     
     
     
-        /***
-         *  Parse for author
-         * 
-         * */
-        if (author != "") {
-            byLine = '<p class="card-text author"><strong>By ' + author + '</strong></p>';
-        }
+
     
     
     
     
-        /***
-         *  Parse for Setting
-         * 
-         * */
-        if (topicSetting != "") {
-            topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting: </strong>' + topicSetting + '</p>';
-        }
-    
+
     
     
     
