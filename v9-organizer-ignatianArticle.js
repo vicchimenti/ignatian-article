@@ -222,12 +222,12 @@
     document.write(openImageWrapper);
     document.write(imageString);
     document.write(closeImageWrapper);
+    document.write(openSummaryWrapper);
     document.write(openHeader);
     document.write(externalLinkString);
     document.write(dateString);
     document.write(closeHeader);
     document.write(openBodyWrapper);
-    document.write(openSummaryWrapper);
     document.write(byLine);
     document.write(summaryString);
     document.write(closeSummaryWrapper);
