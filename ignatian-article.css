@@ -56,7 +56,15 @@ div.newsroomArticle.tags strong {
 /* Mobile layouts below 992 */
 @media screen and (max-width: 991.99px) {
 
+    .ignatianArticle h3.card-title {
+        line-height: 1.2;
+    }
+
     .ignatianArticle .externalLink a {
+        font-size: 1.5rem;
+    }
+
+    .ignatianArticle .card-header p {
         font-size: 1.5rem;
     }
 
