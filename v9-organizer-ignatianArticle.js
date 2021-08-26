@@ -46,7 +46,7 @@
      *  default initializations
      * 
      * */
-    var beginningHTML = '<div class="newsItemWrapper ignatianArticle card" id="id' + contentID + '" aria-label="' + articleTitle + '"><div class="newsItem standardContent">';
+    var beginningHTML = '<div class="newsItemWrapper contentItem ignatianArticle card" id="id' + contentID + '" aria-label="' + articleTitle + '"><div class="newsItem standardContent">';
     var endingHTML = '</div></div>';
     var openRow = '<div class="row no-gutters">';
     var closeRow = '</div>';
