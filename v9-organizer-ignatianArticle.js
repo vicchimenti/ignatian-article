@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.26
+   *     @version 6.27
    */
 
 
@@ -88,7 +88,7 @@
      * 
      * */
     if (externalLink != "" && journal != "") {
-        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
+        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" class="card-link" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
     }
 
 
