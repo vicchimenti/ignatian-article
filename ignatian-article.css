@@ -3,6 +3,10 @@ strong.articleLabel {
     padding-right: 2rem;
 }
 
+.ignatianArticle h3.card-text {
+    padding: 0;
+}
+
 .newsItem .articleSummary p.summaryText {
     margin-top: 1rem;
     margin-bottom: 1rem;
