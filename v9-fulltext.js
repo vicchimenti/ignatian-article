@@ -246,41 +246,6 @@
 
 
 
-
-
-
-
-
-    /***
-     *  write document once
-     * 
-     * */
-    // document.write(beginningHTML);
-    // document.write(titleLink);
-    // document.write(openRow);
-    // document.write(openImageWrapper);
-    // document.write(imageString);
-
-    // document.write(closeImageWrapper);
-    // document.write(openBodyWrapper);
-    // document.write(externalLinkString);
-    // document.write(openSummaryWrapper);
-
-    // document.write(byLine);
-    // document.write(summaryString);
-    // document.write(dateString);
-    // document.write(topicSettingString);
-    // document.write(resourceString);
-    // document.write(programString);
-    // document.write(listOfLevels);
-    // document.write(listOfCourses);
-    // document.write(listOfTags);
-    // document.write(closeSummaryWrapper);
-    // document.write(closeBodyWrapper);
-    // document.write(closeRow);
-    // document.write(endingHTML);
-
-
   } catch (err) {
       document.write(err.message);
   }
