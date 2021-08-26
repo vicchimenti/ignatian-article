@@ -68,6 +68,9 @@
     var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
     var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
     var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
+    var openHiddenFields = '<div class="articleHidden hidden visually-hidden">';
+    var closeHiddenFields = '</div>';
+
 
 
 
