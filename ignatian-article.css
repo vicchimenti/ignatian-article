@@ -8,6 +8,10 @@ strong.articleLabel {
     margin-bottom: 1rem;
 }
 
+.ignatianArticle p.publishDate {
+    margin-bottom: 0;
+}
+
 div.newsroomArticle.tags strong {
     color: #333333;
     font-size: 1.6rem;
