@@ -66,6 +66,7 @@ div.newsroomArticle.tags strong {
 
     .ignatianArticle .card-header p {
         font-size: 1.5rem;
+        line-height: 1.2;
     }
 
     .ignatianArticle hr.articleBorderBottom {
