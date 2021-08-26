@@ -87,14 +87,6 @@
 
 
 
-      /***
-       *  Parse for external link
-       * 
-       * */
-    //   if (externalLink != "" && externalLinkText != "") {
-    //       externalLinkString = '<p class="externalLink card-text"><a href="' + externalLink + '" title="' + externalLinkText + '" target="_blank" class="card-link"><em>' + externalLinkText + '</em></a></p>';
-    //   }
-
 
     /***
      *  Parse for external link
