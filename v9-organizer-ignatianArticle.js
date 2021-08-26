@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.27
+   *     @version 6.29
    */
 
 
@@ -225,10 +225,10 @@
     document.write(openSummaryWrapper);
     document.write(byLine);
     document.write(summaryString);
-    document.write(dateString);
-    document.write(topicSettingString);
     document.write(closeSummaryWrapper);
     document.write(openHiddenFields);
+    document.write(dateString);
+    document.write(topicSettingString);
     document.write(resourceString);
     document.write(programString);
     document.write(listOfLevels);
