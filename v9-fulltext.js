@@ -5,7 +5,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.1
+   *     @version 6.2
    */
 
 
@@ -78,7 +78,7 @@
      * 
      * */
     if (externalLink != "" && journal != "") {
-        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
+        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" class="card-link" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
     }
 
 
@@ -128,7 +128,7 @@
      * 
      * */
     if (resource != "") {
-        resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
+        resourceString = '<p class="card-text singleTag resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
     }
 
 
@@ -138,7 +138,7 @@
      * 
      * */
     if (program != "") {
-        programString = '<p class="card-text program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
+        programString = '<p class="card-text singleTag program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
     }
 
 
@@ -150,7 +150,7 @@
      * 
      * */
     if (topicSetting != "") {
-        topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
+        topicSettingString = '<p class="card-text singleTag setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
     }
 
 
