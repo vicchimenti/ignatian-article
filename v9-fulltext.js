@@ -177,7 +177,7 @@
     }
 
 
-    
+
     /***
      *  parse the list of topics tags, add <li> tags
      * 
@@ -193,74 +193,44 @@
         // Print any tags that were selected
         listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
     }
+    
+    
+    
+    
+    /***
+     *  parse the list of level tags, add <li> tags
+     * 
+     * */
+    if (level != "") {
 
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-        /***
-         *  parse the list of level tags, add <li> tags
-         * 
-         * */
-        if (level != "") {
-    
-            let levelItems = '';
-            let arrayOfLevels = level.split(',');
-            for (let i = 0; i < arrayOfLevels.length; i++) {
-                levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
-            }
-    
-            // Print any tags that were selected
-            listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
+        let levelItems = '';
+        let arrayOfLevels = level.split(',');
+        for (let i = 0; i < arrayOfLevels.length; i++) {
+            levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
         }
-    
-    
-    
-    
-        /***
-         *  parse the list of courses tags, add <li> tags
-         * 
-         * */
-        if (courses != "") {
-    
-            let courseItems = '';
-            let arrayOfCourses = courses.split(',');
-            for (let i = 0; i < arrayOfCourses.length; i++) {
-                courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
-            }
-    
-            // Print any tags that were selected
-            listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
+
+        // Print any tags that were selected
+        listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
+    }
+
+
+
+
+    /***
+     *  parse the list of courses tags, add <li> tags
+     * 
+     * */
+    if (courses != "") {
+
+        let courseItems = '';
+        let arrayOfCourses = courses.split(',');
+        for (let i = 0; i < arrayOfCourses.length; i++) {
+            courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
         }
+
+        // Print any tags that were selected
+        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
+    }
     
     
     
