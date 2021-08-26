@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.33
+   *     @version 6.34
    */
 
 
@@ -82,7 +82,7 @@
      * 
      * */
     if (articleFullBody != "") {
-        titleLink = '<h3><a href="' + fullTextLink + '" title="' + articleTitle + '">' + articleTitle + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '" title="' + articleTitle + '">' + articleTitle + '</a></h3>';
     }
 
 
