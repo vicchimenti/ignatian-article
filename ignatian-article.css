@@ -17,6 +17,7 @@ strong.articleLabel {
 }
 
 .ignatianArticle .card-header p {
+    line-height: 1.6;
     margin-bottom: 0;
 }
 
