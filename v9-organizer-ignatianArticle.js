@@ -225,10 +225,10 @@
     document.write(openBodyWrapper);
     document.write(openHeader);
     document.write(externalLinkString);
+    document.write(byLine);
     document.write(dateString);
     document.write(closeHeader);
     document.write(openSummaryWrapper);
-    document.write(byLine);
     document.write(summaryString);
     document.write(closeSummaryWrapper);
     document.write(openHiddenFields);
