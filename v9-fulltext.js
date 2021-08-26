@@ -189,14 +189,7 @@
     
     
     
-        /***
-         *  Parse for image
-         * 
-         * */
-        if (articleImage != "") {
-            openImageWrapper = '<div class="col-md-4">';
-            imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
-        }
+
     
     
     
