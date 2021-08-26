@@ -8,7 +8,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.30
+   *     @version 6.31
    */
 
 
@@ -47,7 +47,7 @@
      * 
      * */
     var beginningHTML = '<div class="newsItemWrapper contentItem ignatianArticle card" id="id' + contentID + '" aria-label="' + articleTitle + '"><div class="newsItem standardContent">';
-    var endingHTML = '</div></div>';
+    var endingHTML = '</div><hr class="articleBorderBottom"></div>';
     var openRow = '<div class="row no-gutters">';
     var closeRow = '</div>';
     var titleLink = '<h3 class="card-title">' + articleTitle + '</h3>';
