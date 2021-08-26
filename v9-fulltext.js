@@ -97,6 +97,15 @@
     //   }
 
 
+    /***
+     *  Parse for external link
+     * 
+     * */
+    if (externalLink != "" && journal != "") {
+        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
+    }
+
+
       /***
        *  Parse for image
        * 
@@ -171,6 +180,128 @@
 
 
 
+    
+    
+    
+    
+
+    
+    
+    
+    
+        /***
+         *  Parse for image
+         * 
+         * */
+        if (articleImage != "") {
+            openImageWrapper = '<div class="col-md-4">';
+            imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
+        }
+    
+    
+    
+    
+        /***
+         *  Parse for author
+         * 
+         * */
+        if (author != "") {
+            byLine = '<p class="card-text author"><strong>By ' + author + '</strong></p>';
+        }
+    
+    
+    
+    
+        /***
+         *  Parse for Setting
+         * 
+         * */
+        if (topicSetting != "") {
+            topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting: </strong>' + topicSetting + '</p>';
+        }
+    
+    
+    
+    
+        /***
+         *  Parse for Resource
+         * 
+         * */
+        if (resource != "") {
+            resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
+        }
+    
+    
+    
+    
+        /***
+         *  Parse for Program Type
+         * 
+         * */
+        if (program != "") {
+            programString = '<p class="card-text program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
+        }
+    
+    
+    
+    
+        /***
+         *  parse the list of level tags, add <li> tags
+         * 
+         * */
+        if (level != "") {
+    
+            let levelItems = '';
+            let arrayOfLevels = level.split(',');
+            for (let i = 0; i < arrayOfLevels.length; i++) {
+                levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
+            }
+    
+            // Print any tags that were selected
+            listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
+        }
+    
+    
+    
+    
+        /***
+         *  parse the list of courses tags, add <li> tags
+         * 
+         * */
+        if (courses != "") {
+    
+            let courseItems = '';
+            let arrayOfCourses = courses.split(',');
+            for (let i = 0; i < arrayOfCourses.length; i++) {
+                courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
+            }
+    
+            // Print any tags that were selected
+            listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
+        }
+    
+    
+    
+    
+        /***
+         *  parse the list of topics tags, add <li> tags
+         * 
+         * */
+        if (topics != "") {
+    
+            let listItems = '';
+            let arrayOfTags = topics.split(',');
+            for (let i = 0; i < arrayOfTags.length; i++) {
+                listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+            }
+    
+            // Print any tags that were selected
+            listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy: </strong><ul class="categories">' + listItems + '</ul></div>';
+        }
+
+
+
+
       /***
        *  write document once
        * 
@@ -215,137 +346,7 @@
 
 
 
-    /***
-     *  check for fulltext content
-     * 
-     * */
-    if (articleFullBody != "") {
-        titleLink = '<h3><a href="' + fullTextLink + '" title="Read the full post ' + articleTitle + '">' + articleTitle + '</a></h3>';
-    }
 
-
-
-
-    /***
-     *  Parse for external link
-     * 
-     * */
-    if (externalLink != "" && journal != "") {
-        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
-    }
-
-
-
-
-    /***
-     *  Parse for image
-     * 
-     * */
-    if (articleImage != "") {
-        openImageWrapper = '<div class="col-md-4">';
-        imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
-    }
-
-
-
-
-    /***
-     *  Parse for author
-     * 
-     * */
-    if (author != "") {
-        byLine = '<p class="card-text author"><strong>By ' + author + '</strong></p>';
-    }
-
-
-
-
-    /***
-     *  Parse for Setting
-     * 
-     * */
-    if (topicSetting != "") {
-        topicSettingString = '<p class="card-text setting"><strong class="articleLabel">Setting: </strong>' + topicSetting + '</p>';
-    }
-
-
-
-
-    /***
-     *  Parse for Resource
-     * 
-     * */
-    if (resource != "") {
-        resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
-    }
-
-
-
-
-    /***
-     *  Parse for Program Type
-     * 
-     * */
-    if (program != "") {
-        programString = '<p class="card-text program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
-    }
-
-
-
-
-    /***
-     *  parse the list of level tags, add <li> tags
-     * 
-     * */
-    if (level != "") {
-
-        let levelItems = '';
-        let arrayOfLevels = level.split(',');
-        for (let i = 0; i < arrayOfLevels.length; i++) {
-            levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
-    }
-
-
-
-
-    /***
-     *  parse the list of courses tags, add <li> tags
-     * 
-     * */
-    if (courses != "") {
-
-        let courseItems = '';
-        let arrayOfCourses = courses.split(',');
-        for (let i = 0; i < arrayOfCourses.length; i++) {
-            courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
-    }
-
-
-
-
-    /***
-     *  parse the list of topics tags, add <li> tags
-     * 
-     * */
-    if (topics != "") {
-
-        let listItems = '';
-        let arrayOfTags = topics.split(',');
-        for (let i = 0; i < arrayOfTags.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy: </strong><ul class="categories">' + listItems + '</ul></div>';
-    }
 
 
 
