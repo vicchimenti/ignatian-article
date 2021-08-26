@@ -196,7 +196,6 @@
     
     
     
-    
     /***
      *  parse the list of level tags, add <li> tags
      * 
@@ -212,7 +211,6 @@
         // Print any tags that were selected
         listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
     }
-
 
 
 
