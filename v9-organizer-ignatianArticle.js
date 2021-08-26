@@ -70,6 +70,8 @@
     var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
     var openHiddenFields = '<div class="articleHidden hidden visually-hidden">';
     var closeHiddenFields = '</div>';
+    var openHeader = '<div class="card-header border-0 bg-0">';
+    var closeHeader = '</div>';
 
 
 
