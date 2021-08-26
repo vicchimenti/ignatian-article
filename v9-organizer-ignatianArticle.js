@@ -227,12 +227,14 @@
     document.write(summaryString);
     document.write(dateString);
     document.write(topicSettingString);
+    document.write(closeSummaryWrapper);
+    document.write(openHiddenFields);
     document.write(resourceString);
     document.write(programString);
     document.write(listOfLevels);
     document.write(listOfCourses);
     document.write(listOfTags);
-    document.write(closeSummaryWrapper);
+    document.write(closeHiddenFields);
     document.write(closeBodyWrapper);
     document.write(closeRow);
     document.write(endingHTML);
