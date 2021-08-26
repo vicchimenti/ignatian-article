@@ -151,6 +151,15 @@
       }
 
 
+    /***
+     *  Parse for Resource
+     * 
+     * */
+    if (resource != "") {
+        resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
+    }
+
+
 
 
     /***
@@ -205,13 +214,7 @@
     
     
     
-        /***
-         *  Parse for Resource
-         * 
-         * */
-        if (resource != "") {
-            resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
-        }
+
     
     
     
