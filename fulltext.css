@@ -51,3 +51,7 @@ div.newsroomArticle.tags strong {
 .ignatianArticle .articleBody .externalLink a:hover {
     text-decoration: underline;
 }
+
+.ignatianArticle .articleBody .singleTag {
+    line-height: 2;
+}
