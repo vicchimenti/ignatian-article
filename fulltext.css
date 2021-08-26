@@ -61,7 +61,7 @@ div.newsroomArticle.tags strong {
 
 /* Mobile layouts below 992 */
 @media screen and (max-width: 991.99px) {
-    .ignatianArticle .newsroomArticle .tags {
+    .ignatianArticle div.newsroomArticle.tags {
         display: inline-block;
     }
 }
