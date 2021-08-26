@@ -72,12 +72,11 @@
       var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"><li class="tag">No Level Provided</li></ul></div>';
       var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
       var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
+      var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
 
 
-      var listItems = '';
       var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
 
-      var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
 
 
       var openRow = '<div class="row no-gutters">';
@@ -180,23 +179,24 @@
 
 
 
-    /***
-     *  parse the list of tags, add <li> tags
-     * 
-     * */
-    if (topics != "") {
-        var arrayOfTags = topics.split(',');
-        for (let i = 0; i < arrayOfTags.length; i++) {
-            let currentItem = arrayOfTags[i].trim();
-            listItems += '<li class="tag">' + currentItem + '</li>';
+
+
+
+        /***
+         *  parse the list of topics tags, add <li> tags
+         * 
+         * */
+         if (topics != "") {
+    
+            let listItems = '';
+            let arrayOfTags = topics.split(',');
+            for (let i = 0; i < arrayOfTags.length; i++) {
+                listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+            }
+    
+            // Print any tags that were selected
+            listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
         }
-
-        // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
-    }
-
-
-
 
     
     
@@ -269,21 +269,7 @@
     
     
     
-        /***
-         *  parse the list of topics tags, add <li> tags
-         * 
-         * */
-        if (topics != "") {
-    
-            let listItems = '';
-            let arrayOfTags = topics.split(',');
-            for (let i = 0; i < arrayOfTags.length; i++) {
-                listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
-            }
-    
-            // Print any tags that were selected
-            listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy: </strong><ul class="categories">' + listItems + '</ul></div>';
-        }
+
 
 
 
