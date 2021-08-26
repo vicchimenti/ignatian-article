@@ -3,8 +3,12 @@ strong.articleLabel {
     padding-right: 2rem;
 }
 
-.ignatianArticle h3.card-text {
+.ignatianArticle h3.card-title {
     padding: 0;
+}
+
+.ignatianArticle .externalLink a {
+    line-height: 1.6;
 }
 
 .newsItem .articleSummary p.summaryText {
@@ -12,7 +16,7 @@ strong.articleLabel {
     margin-bottom: 1rem;
 }
 
-.ignatianArticle p.publishDate {
+.ignatianArticle .card-header p {
     margin-bottom: 0;
 }
 
@@ -44,7 +48,6 @@ div.newsroomArticle.tags strong {
     content: unset;
 }
 
-
 .ignatianArticle hr.articleBorderBottom {
     display: none;
 }
@@ -54,7 +57,6 @@ div.newsroomArticle.tags strong {
 
     .ignatianArticle hr.articleBorderBottom {
         border-top: 3px solid #e5e5e5;
-        /* color: #e5e5e5; */
         display: block;
         height: 3px;
         margin-left: 20px;
