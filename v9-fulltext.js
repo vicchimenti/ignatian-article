@@ -71,12 +71,12 @@
       var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"><li class="tag">No Course Type Provided</li></ul></div>';
       var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"><li class="tag">No Level Provided</li></ul></div>';
       var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
+      var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
 
 
       var listItems = '';
       var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
 
-      var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
       var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
 
 
@@ -106,49 +106,45 @@
     }
 
 
-      /***
-       *  Parse for image
-       * 
-       * */
-      if (articleImage != "") {
-          openImageWrapper = '<div class="imageWrapper">';
-          imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
-      }
+    /***
+     *  Parse for image
+     * 
+     * */
+    if (articleImage != "") {
+        openImageWrapper = '<div class="imageWrapper">';
+        imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
+    }
 
 
 
-
-      /***
-       *  Parse for caption
-       * 
-       * */
-      if (articleCaption != "") {
-          articleCaptionString = '<h2 class="card-title articleCaption">' + articleCaption + '</h2>';
-      }
-
+    /***
+     *  Parse for caption
+     * 
+     * */
+    if (articleCaption != "") {
+        articleCaptionString = '<h2 class="card-title articleCaption">' + articleCaption + '</h2>';
+    }
 
 
 
-      /***
-       *  Parse for author
-       * 
-       * */
-      if (articleAuthor != "") {
-          articleAuthorString = '<p class="card-text articleAuthor credits">By ' + articleAuthor + '</p>';
-      }
+    /***
+     *  Parse for author
+     * 
+     * */
+    if (articleAuthor != "") {
+        articleAuthorString = '<p class="card-text articleAuthor credits">By ' + articleAuthor + '</p>';
+    }
 
 
 
+    /***
+     *  Parse for photo credit
+     * 
+     * */
+    if (articlePhotoCredit != "") {
+        articlePhotoCreditString = '<p class="card-text articlePhotoCredit credits">Photography by ' + articlePhotoCredit + '</p>';
+    }
 
-
-
-      /***
-       *  Parse for photo credit
-       * 
-       * */
-      if (articlePhotoCredit != "") {
-          articlePhotoCreditString = '<p class="card-text articlePhotoCredit credits">Photography by ' + articlePhotoCredit + '</p>';
-      }
 
 
     /***
@@ -158,6 +154,17 @@
     if (resource != "") {
         resourceString = '<p class="card-text resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
     }
+
+
+
+    /***
+     *  Parse for Program Type
+     * 
+     * */
+    if (program != "") {
+        programString = '<p class="card-text program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
+    }
+
 
 
 
@@ -219,13 +226,7 @@
     
     
     
-        /***
-         *  Parse for Program Type
-         * 
-         * */
-        if (program != "") {
-            programString = '<p class="card-text program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
-        }
+
     
     
     
