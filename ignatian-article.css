@@ -37,12 +37,21 @@ div.newsroomArticle.tags strong {
 }
 
 
+.ignatianArticle hr.articleBorderBottom {
+    display: none;
+}
+
 /* Mobile layouts below 992 */
 @media screen and (max-width: 991.99px) {
 
-    /* .ignatianArticle.newsItemWrapper {
-        border-bottom: 1px Solid #f7f7f7;
-    } */
+    .ignatianArticle hr.articleBorderBottom {
+        color: #e5e5e5;
+        display: block;
+        height: 3px;
+        margin-left: 20px;
+        margin-right: 20px;
+        opacity: unset;
+    }
 
     .ignatianArticle div.newsroomArticle.tags {
         width: unset;
