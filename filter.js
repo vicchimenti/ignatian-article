@@ -200,7 +200,7 @@ $(function () {
 
 
 
-            //   ***   Program Type Radio Filter   ***   //
+            //   ***   Program Type Check box Filter   ***   //
             $(function () {
                 $('#SelectBox-ByProgram').change(function () {
                     let programKeys = [];
@@ -213,7 +213,7 @@ $(function () {
                             let programValue = $(this).text();
                             $(this).parents('.ignatianArticle').addClass('hideByProgram');
                             for (let index = 0; index < programKeys.length; index++) {
-                                if (programValue.match(programKeys[index])) {
+                                if (programValue.includes(programKeys[index])) {
                                     $(this).parents('.ignatianArticle').removeClass('hideByProgram');
                                 }
                             }
