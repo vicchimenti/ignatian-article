@@ -162,13 +162,13 @@
       if (program != "") {
 
           let programItems = '';
-          let arrayOfTags = topics.split(',');
-          for (let i = 0; i < arrayOfTags.length; i++) {
-              programItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+          let arrayOfPrograms = topics.split(',');
+          for (let i = 0; i < arrayOfPrograms.length; i++) {
+              programItems += '<li class="tag">' + arrayOfPrograms[i].trim() + '</li>';
           }
 
           // Print any tags that were selected
-          listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
+          listOfPrograms = '<div class="newsroomArticle tags program"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + programItems + '</ul></div>';
       }
 
 
