@@ -28,7 +28,7 @@
       var externalLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Link' output='normal' modifiers='striptags,htmlentities' />");
       var journal = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Journal' output='normal' modifiers='striptags,htmlentities' />");
       var topics = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Topic' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
-      var topicSetting = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Setting' output='normal' display_field='value' modifiers='striptags,htmlentities' />");  
+      var topicSetting = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Setting' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var courses = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Course' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var level = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Level' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var program = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
@@ -39,7 +39,7 @@
       var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
 
 
-  
+
 
 
       /***
@@ -73,143 +73,141 @@
 
 
 
-    /***
-     *  Parse for external link
-     * 
-     * */
-    if (externalLink != "" && journal != "") {
-        externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" class="card-link" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
-    }
+      /***
+       *  Parse for external link
+       * 
+       * */
+      if (externalLink != "" && journal != "") {
+          externalLinkString = '<span class="externalLink"><a href="' + externalLink + '" class="card-link" title="' + journal + '" target="_blank"><em>' + journal + '</em></a></span>';
+      }
 
 
-    /***
-     *  Parse for image
-     * 
-     * */
-    if (articleImage != "") {
-        openImageWrapper = '<div class="imageWrapper">';
-        imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
-    }
-
-
-
-    /***
-     *  Parse for caption
-     * 
-     * */
-    if (articleCaption != "") {
-        articleCaptionString = '<h2 class="card-title articleCaption">' + articleCaption + '</h2>';
-    }
+      /***
+       *  Parse for image
+       * 
+       * */
+      if (articleImage != "") {
+          openImageWrapper = '<div class="imageWrapper">';
+          imageString = '<img src="' + articleImage + '" class="articleImage card-img" alt="' + articleImageAlt + '" />';
+      }
 
 
 
-    /***
-     *  Parse for author
-     * 
-     * */
-    if (articleAuthor != "") {
-        articleAuthorString = '<p class="card-text articleAuthor credits">By ' + articleAuthor + '</p>';
-    }
+      /***
+       *  Parse for caption
+       * 
+       * */
+      if (articleCaption != "") {
+          articleCaptionString = '<h2 class="card-title articleCaption">' + articleCaption + '</h2>';
+      }
 
 
 
-    /***
-     *  Parse for photo credit
-     * 
-     * */
-    if (articlePhotoCredit != "") {
-        articlePhotoCreditString = '<p class="card-text articlePhotoCredit credits">Photography by ' + articlePhotoCredit + '</p>';
-    }
+      /***
+       *  Parse for author
+       * 
+       * */
+      if (articleAuthor != "") {
+          articleAuthorString = '<p class="card-text articleAuthor credits">By ' + articleAuthor + '</p>';
+      }
 
 
 
-    /***
-     *  Parse for Resource
-     * 
-     * */
-    if (resource != "") {
-        resourceString = '<p class="card-text singleTag resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
-    }
+      /***
+       *  Parse for photo credit
+       * 
+       * */
+      if (articlePhotoCredit != "") {
+          articlePhotoCreditString = '<p class="card-text articlePhotoCredit credits">Photography by ' + articlePhotoCredit + '</p>';
+      }
 
 
 
-    /***
-     *  Parse for Program Type
-     * 
-     * */
-    if (program != "") {
-        programString = '<p class="card-text singleTag program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
-    }
+      /***
+       *  Parse for Resource
+       * 
+       * */
+      if (resource != "") {
+          resourceString = '<p class="card-text singleTag resource"><strong class="articleLabel">Activity Type: </strong><span class="resourceType">' + resource + '</span></p>';
+      }
+
+
+
+      /***
+       *  Parse for Setting
+       * 
+       * */
+      if (topicSetting != "") {
+          topicSettingString = '<p class="card-text singleTag setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
+      }
+
+
+
+      /***S
+       *  Parse for Program Type
+       * 
+       * */
+      if (program != "") {
+          programString = '<p class="card-text singleTag program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
+      }
+
+
+
+      /***
+       *  parse the list of topics tags, add <li> tags
+       * 
+       * */
+      if (topics != "") {
+
+          let listItems = '';
+          let arrayOfTags = topics.split(',');
+          for (let i = 0; i < arrayOfTags.length; i++) {
+              listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+          }
+
+          // Print any tags that were selected
+          listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
+      }
+
+
+
+      /***
+       *  parse the list of level tags, add <li> tags
+       * 
+       * */
+      if (level != "") {
+
+          let levelItems = '';
+          let arrayOfLevels = level.split(',');
+          for (let i = 0; i < arrayOfLevels.length; i++) {
+              levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
+          }
+
+          // Print any tags that were selected
+          listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
+      }
+
+
+
+      /***
+       *  parse the list of courses tags, add <li> tags
+       * 
+       * */
+      if (courses != "") {
+
+          let courseItems = '';
+          let arrayOfCourses = courses.split(',');
+          for (let i = 0; i < arrayOfCourses.length; i++) {
+              courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
+          }
+
+          // Print any tags that were selected
+          listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
+      }
 
 
 
 
-
-    /***
-     *  Parse for Setting
-     * 
-     * */
-    if (topicSetting != "") {
-        topicSettingString = '<p class="card-text singleTag setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
-    }
-
-
-
-    /***
-     *  parse the list of topics tags, add <li> tags
-     * 
-     * */
-    if (topics != "") {
-
-        let listItems = '';
-        let arrayOfTags = topics.split(',');
-        for (let i = 0; i < arrayOfTags.length; i++) {
-            listItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
-    }
-    
-    
-    
-    /***
-     *  parse the list of level tags, add <li> tags
-     * 
-     * */
-    if (level != "") {
-
-        let levelItems = '';
-        let arrayOfLevels = level.split(',');
-        for (let i = 0; i < arrayOfLevels.length; i++) {
-            levelItems += '<li class="tag">' + arrayOfLevels[i].trim() + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfLevels = '<div class="newsroomArticle tags levels"><strong class="card-text articleLabel">Level: </strong><ul class="categories">' + levelItems + '</ul></div><br>';
-    }
-
-
-
-    /***
-     *  parse the list of courses tags, add <li> tags
-     * 
-     * */
-    if (courses != "") {
-
-        let courseItems = '';
-        let arrayOfCourses = courses.split(',');
-        for (let i = 0; i < arrayOfCourses.length; i++) {
-            courseItems += '<li class="tag">' + arrayOfCourses[i].trim() + '</li>';
-        }
-
-        // Print any tags that were selected
-        listOfCourses = '<div class="newsroomArticle tags courses"><strong class="card-text articleLabel">Course: </strong><ul class="categories">' + courseItems + '</ul></div><br>';
-    }
-    
-    
-    
-    
 
       /***
        *  write document once
@@ -233,7 +231,7 @@
       document.write(programString);
       document.write(listOfLevels);
       document.write(listOfCourses);
-      document.write(listOfTags);  
+      document.write(listOfTags);
       document.write(closePublishWrapper);
       document.write(articleFullBody);
       document.write(closeBodyWrapper);
