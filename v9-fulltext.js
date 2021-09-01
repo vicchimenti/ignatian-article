@@ -5,7 +5,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.8
+   *     @version 6.9
    */
 
 
@@ -31,9 +31,7 @@
       var topicSetting = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Setting' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var courses = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Course' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var level = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Level' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
-      //   var program = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var programs = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
-
       var resource = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Resource' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' modifiers='striptags,htmlentities' />");
       var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
@@ -63,8 +61,6 @@
       var imageString = '<img class="hidden visually-hidden" />';
       var dateString = '<p class="publishDate card-text"><small>' + publishDate + '</small></p>';
       var externalLinkString = '<p class="externalLink hidden">No Proper Link Provided</p>';
-      //   var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
-
       var listOfPrograms = '<div class="newsroomArticle tags program hidden visually-hidden"><ul class="categories"><li class="tag">No Program Provided</li></ul></div>';
       var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"><li class="tag">No Pedagogy Provided</li></ul></div>';
       var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"><li class="tag">No Course Type Provided</li></ul></div>';
@@ -144,16 +140,6 @@
       if (topicSetting != "") {
           topicSettingString = '<p class="card-text singleTag setting"><strong class="articleLabel">Setting:</strong> ' + topicSetting + '</p>';
       }
-
-
-
-      /***S
-       *  Parse for Program Type
-       * 
-       * */
-      //   if (program != "") {
-      //       programString = '<p class="card-text singleTag program"><strong class="articleLabel">Program Type: </strong><span class="programType">' + program + '</span></p>';
-      //   }
 
 
 
@@ -250,7 +236,6 @@
       document.write(dateString);
       document.write(topicSettingString);
       document.write(resourceString);
-      //   document.write(programString);
       document.write(listOfPrograms);
       document.write(listOfLevels);
       document.write(listOfCourses);
