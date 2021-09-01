@@ -159,6 +159,24 @@
        *  parse the list of topics tags, add <li> tags
        * 
        * */
+      if (program != "") {
+
+          let programItems = '';
+          let arrayOfTags = topics.split(',');
+          for (let i = 0; i < arrayOfTags.length; i++) {
+              programItems += '<li class="tag">' + arrayOfTags[i].trim() + '</li>';
+          }
+
+          // Print any tags that were selected
+          listOfTags = '<div class="newsroomArticle tags pedagogy"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + listItems + '</ul></div>';
+      }
+
+
+
+      /***
+       *  parse the list of topics tags, add <li> tags
+       * 
+       * */
       if (topics != "") {
 
           let listItems = '';
