@@ -32,6 +32,8 @@
       var courses = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Course' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var level = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Level' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var program = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
+      var programs = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
+
       var resource = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Resource' output='normal' display_field='value' modifiers='striptags,htmlentities' />");
       var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' modifiers='striptags,htmlentities' />");
       var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
@@ -159,10 +161,10 @@
        *  parse the list of topics tags, add <li> tags
        * 
        * */
-      if (program != "") {
+      if (programs != "") {
 
           let programItems = '';
-          let arrayOfPrograms = topics.split(',');
+          let arrayOfPrograms = programs.split(',');
           for (let i = 0; i < arrayOfPrograms.length; i++) {
               programItems += '<li class="tag">' + arrayOfPrograms[i].trim() + '</li>';
           }
