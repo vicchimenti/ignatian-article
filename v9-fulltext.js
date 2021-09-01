@@ -5,7 +5,7 @@
    *
    *     Document will write once when the page loads
    *
-   *     @version 6.3
+   *     @version 6.4
    */
 
 
@@ -61,12 +61,14 @@
       var imageString = '<img class="hidden visually-hidden" />';
       var dateString = '<p class="publishDate card-text"><small>' + publishDate + '</small></p>';
       var externalLinkString = '<p class="externalLink hidden">No Proper Link Provided</p>';
+      var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
+
+      var listOfPrograms = '<div class="newsroomArticle tags program hidden visually-hidden"><ul class="categories"><li class="tag">No Program Provided</li></ul></div>';
       var listOfTags = '<div class="newsroomArticle tags pedagogy hidden visually-hidden"><ul class="categories"><li class="tag">No Pedagogy Provided</li></ul></div>';
       var listOfCourses = '<div class="newsroomArticle tags courses hidden visually-hidden"><ul class="categories"><li class="tag">No Course Type Provided</li></ul></div>';
       var listOfLevels = '<div class="newsroomArticle tags levels hidden visually-hidden"><ul class="categories"><li class="tag">No Level Provided</li></ul></div>';
       var byLine = '<p class="card-text text-muted font-weight-light author hidden visually-hidden">No Author Provided</p>';
       var resourceString = '<p class="card-text resource hidden visually-hidden">No Resource Provided</p>';
-      var programString = '<p class="card-text program hidden visually-hidden">No Program Provided</p>';
       var topicSettingString = '<p class="card-text setting hidden visually-hidden">No Setting Provided</p>';
 
 
