@@ -250,7 +250,7 @@
       document.write(dateString);
       document.write(topicSettingString);
       document.write(resourceString);
-      document.write(programString);
+      //   document.write(programString);
       document.write(listOfPrograms);
       document.write(listOfLevels);
       document.write(listOfCourses);
