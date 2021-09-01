@@ -168,7 +168,7 @@
           }
 
           // Print any tags that were selected
-          listOfPrograms = '<div class="newsroomArticle tags program"><strong class="card-text articleLabel">Ignatian Pedagogy Element: </strong><ul class="categories">' + programItems + '</ul></div>';
+          listOfPrograms = '<div class="newsroomArticle tags program"><strong class="card-text articleLabel">Program Type: </strong><ul class="categories">' + programItems + '</ul></div><br>';
       }
 
 
